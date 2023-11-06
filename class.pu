@@ -1,0 +1,24 @@
+@startuml cdio3
+class Main
+class RaffleCup
+class Board
+class Dice
+abstract class Tile
+class Deck
+class Player
+class Wallet
+class DeedManager
+
+enum color
+
+Tile -- color
+Main -- RaffleCup
+Main -- Board
+Main -- Player
+RaffleCup -- Dice
+Board -- Tile
+Board -- Deck
+Player -- Wallet
+Player -- Piece
+Player -- DeedManager
+@enduml
