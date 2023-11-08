@@ -5,8 +5,8 @@ import CDIO3.Tiles.Tile;
 public class CornerPiece implements BoardPiece {
   public String[] pieceLines;
   final private String 
-  horizontal = "-"/*"\u2015"*/,
-  vertical = "|",
+  horizontal = "\u2500",
+  vertical = "\u2502",
   fullBlock = "\u2588";
   final static public int 
   width = 8,
@@ -25,7 +25,7 @@ public class CornerPiece implements BoardPiece {
     lines[1] = vertical + "\u001b[38;5;" + tile.getColor().ansi + "m" + fullBlock.repeat(6) + tile.getColor().resetAnsi + vertical;
     
     //split into to sections
-    lines[2] = vertical + horizontal.repeat(2) + "┬" + horizontal.repeat(3) + vertical;
+    lines[2] = "├" + horizontal + horizontal + "┬" + horizontal + horizontal + horizontal + "┤";
     
     //find tile number and write in constant length
     String tileNR = tile.getNumber() + ""; tileNR += tileNR.length() < 2 ? " " : "";
