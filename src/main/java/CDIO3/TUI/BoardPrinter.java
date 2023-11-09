@@ -30,7 +30,7 @@ public class BoardPrinter {
     }
     return out;
   }
-
+  
   public String BoardAssembler(){
     String out = "";
     for (int j = 0; j < MiddlePiece.height; j++) {
@@ -60,10 +60,14 @@ public class BoardPrinter {
     }
     return out;
   }
+  
   public String setOwner(String board, String[] owners){
     for (int i = 0; i < owners.length; i++) {
       board = board.replace(new String(Character.toChars(0xE000 + i)), owners[i]);
     }
     return board;
+  }
+  public void print(String[] owners){
+    System.out.println(setOwner(BoardAssembler(), owners));
   }
 }
