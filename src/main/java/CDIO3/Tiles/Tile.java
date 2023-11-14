@@ -13,4 +13,6 @@ public abstract class Tile {
   public Color getColor() {
     return color;
   }
+
+  
 }
