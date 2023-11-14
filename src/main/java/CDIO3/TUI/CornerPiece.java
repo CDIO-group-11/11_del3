@@ -27,7 +27,7 @@ public class CornerPiece implements BoardPiece {
     lines[0] = topLeftCorner + horizontal.repeat(6) + topRightCorner;
     
     //color of the tile
-    lines[1] = vertical + "\u001b[38;5;" + tile.getColor().ansi + "m" + fullBlock.repeat(6) + tile.getColor().resetAnsi + vertical;
+    lines[1] = vertical + CommandTUI.getColor(tile.getColor().ansi) + fullBlock.repeat(6) + tile.getColor().resetAnsi + vertical;
     
     //split into to sections
     lines[2] = horizontalRight + horizontal.repeat(2) + verticalDown + horizontal.repeat(3) + horizontalLeft;
@@ -36,7 +36,7 @@ public class CornerPiece implements BoardPiece {
     String tileNR = (tile.getNumber() + 1) + ""; tileNR += tileNR.length() < 2 ? " " : "";
     
     //write the owner and the tile number on the final tile
-    lines[3] = vertical+ "\033[4m" + "  " + vertical + "#" + tileNR + tile.getColor().resetAnsi + vertical;
+    lines[3] = vertical + "  " + vertical + "#" + tileNR + tile.getColor().resetAnsi + vertical;
     
     //return text
     return lines;

@@ -1,6 +1,10 @@
 package CDIO3.TUI;
 
-public class TUI_MOVE {
+public class CommandTUI {
+  final public static String UP = "\r\033[1A";
+  final public static String SKIP = "\033[1C";
+  final public static String CLEAR = "\033[2J";
+  final public static String RESET = "\u001b[0m";
   public static void up(int distance){
     System.out.print("\r\033[" + distance + "A");
   }
@@ -17,13 +21,22 @@ public class TUI_MOVE {
     out += "H";
     System.out.print(out);
   }
-  public static void clear(){
+  public static void clearAll(){
     System.out.print("\033[2J");
   }
+  public static void clearLine(){
+    System.out.print("\r\033[1J");
+  }
   public static void setColor(int r, int g, int b){
-    System.out.print("\033[2;" + r + ";" + g + ";" + b + "m");
+    System.out.print("\033[38;2;" + r + ";" + g + ";" + b + "m");
+  }
+  public static String getColor(int r, int g, int b){
+    return "\033[38;2;" + r + ";" + g + ";" + b + "m";
   }
   public static void setColor(int n){
-    System.out.print("\033[5;" + n + "m");
+    System.out.print("\033[38;5;" + n + "m");
+  }
+  public static String getColor(int n){
+    return "\033[38;5;" + n + "m";
   }
 }
