@@ -32,15 +32,28 @@ public class UserInput {
       }
     }
   }
+  public static Commands getCommand(String[] actions, String message){
+    String[] commands = new String[Commands.values().length];
+    for (int i = 0; i < commands.length; i++) {
+      commands[i] = Commands.values()[i].name();
+    }
+    String in = getCommand(message, commands, actions);
+    for (int i = 0; i < Commands.values().length; i++) {
+      if(in.equals(Commands.values()[i].name().toLowerCase())){
+        return Commands.values()[i];
+      }
+    }
+    return null;
+  }
   public static String getCommand(String message, String[] commands){
     return getCommand(message, commands, new String[commands.length]);
   }
     public static String getCommand(String message, String[] commands, String[] actions){
     while (true) {
       System.out.println(message);
-      String in = scan.nextLine();
+      String in = scan.nextLine().toLowerCase();
       for (int i = 0; i < commands.length; i++) {
-        if(in.equals(commands[i])){
+        if(in.equals(commands[i].toLowerCase())){
           return commands[i];
         }
       }
@@ -48,7 +61,7 @@ public class UserInput {
       for (int i = 0; i < commands.length; i++) {
         System.out.print("\t" + commands[i]);
         if(actions[i] != null){
-          System.out.println("\t" + actions[i]);
+          System.out.println("\t\t" + actions[i]);
         }
       }
     }
