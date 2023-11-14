@@ -1,20 +1,19 @@
 package CDIO3.Player;
 
 public class Player {
-    Wallet WalletObj1 = new Wallet();
     public static int Pamount;
-    int Wallet;
-    int Piece;
-    String PropertyDeeds;
+    Wallet wallet = new Wallet();
+    int piece;
+    String propertyDeeds;
 
-    public int getWallet() {
-        return Wallet;
+    public Wallet getWallet() {
+        return wallet;
     }
     public int getPiece() {
-        return Piece;
+        return piece;
     }
     public String getPropertyDeeds() {
-        return PropertyDeeds;
+        return propertyDeeds;
     }
-    
+
 }
