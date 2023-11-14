@@ -3,7 +3,8 @@ package CDIO3.TUI;
 import CDIO3.Tiles.Tile;
 
 public class BoardPrinter {
-  BoardPiece[] boardPieces;
+  private BoardPiece[] boardPieces;
+  private String[] owners = new String[24];
   public BoardPrinter(Board_temp board){
     BoardPiece[] tempPieces = new BoardPiece[24];
     for (int i = 0; i < 24; i++) {
@@ -60,14 +61,30 @@ public class BoardPrinter {
     }
     return out;
   }
-  
-  public String setOwner(String board, String[] owners){
+  public void setOwner(int tileID, String owner){
+    owners[tileID] = owner;
+  }
+  public void setOwner(Tile tile, String owner){
+    owners[tile.getNumber()-1] = owner;
+  }
+  private String setOwner(String board, String[] owners){
     for (int i = 0; i < owners.length; i++) {
-      board = board.replace(new String(Character.toChars(0xE000 + i)), owners[i]);
+      board = board.replace(new String(Character.toChars(0xE000 + i)), (owners[i] != null ? owners[i] : " "));
     }
     return board;
   }
-  public void print(String[] owners){
-    System.out.println(setOwner(BoardAssembler(), owners));
+  public void print(){
+    System.out.println(setOwner(BoardAssembler(),owners));
+  }
+  public void inspect(int tile) {
+    boardPieces[tile].inspect();
+  }
+  public static void guide() {
+    System.out.println(
+      "┌──────────────┐\n"+
+      "│████color█████│\n"+
+      "├─────┬────────┤\n"+
+      "│owner│#tile nr│"
+    );
   }
 }

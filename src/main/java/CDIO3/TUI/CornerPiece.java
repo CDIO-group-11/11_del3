@@ -4,6 +4,7 @@ import CDIO3.Tiles.Tile;
 
 public class CornerPiece implements BoardPiece {
   public String[] pieceLines;
+  private Tile tile;
   final private String 
   horizontal = "\u2500",
   vertical = "\u2502",
@@ -19,6 +20,7 @@ public class CornerPiece implements BoardPiece {
 
   public CornerPiece(Tile tile) {
     pieceLines = generate(tile);
+    this.tile = tile;
   }
   private String[] generate(Tile tile){
     String[] lines = new String[4];
@@ -44,5 +46,12 @@ public class CornerPiece implements BoardPiece {
   public String getLine(int lineID){
     if(lineID < 0 || lineID >= pieceLines.length) return "missing line"; 
     return pieceLines[lineID];
+  }
+  @Override
+  public void inspect() {
+    System.out.println("tile name: " + tile.getName());
+    System.out.println("tile nr: " + tile.getNumber());
+    System.out.println("tile color: " + tile.getColor().name());
+    System.out.println("players in this tile: " + tile.playerList());
   }
 }
