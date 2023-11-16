@@ -17,7 +17,8 @@ public class TUI_Manager {
       Commands command = UserInput.getCommand(actions,"please choose and action");
       switch (command) {
         case detail:
-          System.out.println("details");;
+          System.out.println("details");
+          break;
         case roll:
           return;
         case inspect:
