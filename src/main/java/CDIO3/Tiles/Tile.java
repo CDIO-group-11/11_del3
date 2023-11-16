@@ -7,7 +7,7 @@ public abstract class Tile {
   public Tile(Color color, String name, int tileNR){
     this.color = color;
     this.name = name;
-    this.number= number;
+    this.tileNR = tileNR;
   }
   public String getName() {
     return name;

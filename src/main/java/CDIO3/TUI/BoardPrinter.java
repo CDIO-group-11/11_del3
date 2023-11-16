@@ -1,11 +1,12 @@
 package CDIO3.TUI;
 
+import CDIO3.Tiles.Board;
 import CDIO3.Tiles.Tile;
 
 public class BoardPrinter {
   private BoardPiece[] boardPieces;
   private String[] owners = new String[24];
-  public BoardPrinter(Board_temp board){
+  public BoardPrinter(Board board){
     BoardPiece[] tempPieces = new BoardPiece[24];
     for (int i = 0; i < 24; i++) {
       Tile tile = board.getTile(i);
