@@ -1,13 +1,18 @@
 package CDIO3.TUI;
 
+import CDIO3.Tiles.Board;
+
 public class TUI_Manager {
   private final static String [] actions = new String[]{"se information about all players","roll for this turn"};
-  private static BoardPrinter print = new BoardPrinter(null); 
+  private BoardPrinter print;
+  public TUI_Manager(Board toBePrinted){
+    print = new BoardPrinter(toBePrinted);
+  }
   /**
    * reads a user input and shows the user the requested information to the user
    * @return on roll command, when the  user rolls
    */
-  public static void readTurn(String details){
+  public void readTurn(String details){
     while (true) {
       Commands command = UserInput.getCommand(actions,"please choose and action");
       switch (command) {
