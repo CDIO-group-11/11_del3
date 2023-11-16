@@ -18,5 +18,4 @@ public abstract class Tile {
   public int getNumber() {
     return tileNR;
   }
-  abstract public String playerList();
 }

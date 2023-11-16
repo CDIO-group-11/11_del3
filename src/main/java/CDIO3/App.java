@@ -14,4 +14,8 @@ public class App
     public static String[] getOwnerList() {
       return null;
     }
+
+    public static String[] playerPossitionList() {
+      return null;
+    }
 }
