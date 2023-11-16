@@ -12,7 +12,7 @@ public enum Color {
   special   (242,'e');
   final public int ansi;
   final public char identifier;
-  final public static String resetAnsi = "\u001b[0m";
+  final public String resetAnsi = "\u001b[0m";
   private Color(int ansi, char identifier){
     this.ansi = ansi;
     this.identifier = identifier;
