@@ -9,10 +9,5 @@ public class Tile_temp extends Tile{
     super(color, name, number);
   }
 
-  @Override
-  public String playerList() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'playerList'");
-  }
 
 }

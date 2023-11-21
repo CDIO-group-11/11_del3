@@ -1,5 +1,6 @@
 package CDIO3.Tiles.differentCards;
 
+
 import CDIO3.Tiles.Color;
 import CDIO3.Tiles.Tile;
 
@@ -9,4 +10,5 @@ public class Zoo extends Tile{
         super(Color.brown, "The zoo", tileNR);
     }
     
+   
 }
