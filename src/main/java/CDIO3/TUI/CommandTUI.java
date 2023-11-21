@@ -17,6 +17,7 @@ public class CommandTUI {
   public static void setPoint(int vertical, int horizontal){
     String out = "\033[";
     out += horizontal > 0 ? horizontal : 1;
+    out += ";";
     out += vertical > 0 ? vertical : 1;
     out += "H";
     System.out.print(out);
