@@ -12,7 +12,7 @@ public class TUI_Manager {
    * reads a user input and shows the user the requested information to the user
    * @return on roll command, when the  user rolls
    */
-  public void readTurn(String details){
+  public void readTurn(int die1, int die2, int currentPlayer, Player[] players){
     while (true) {
       Commands command = UserInput.getCommand(actions,"please choose and action");
       switch (command) {
@@ -22,7 +22,7 @@ public class TUI_Manager {
         case roll:
           return;
         case inspect:
-          print.inspect(UserInput.getInt("which piece do you wish to inspect: "));
+          print.inspect(UserInput.getInt("which piece do you wish to inspect: ",1,24)-1);
           break;
         case guide:
           BoardPrinter.guide();
