@@ -3,7 +3,7 @@ package CDIO3.Player;
 public class Player {
     public static int PlayerAmount;
     Wallet wallet = new Wallet();
-    int piece;
+    Piece piece;
     String propertyDeeds;
 
     public Wallet getWallet() {
