@@ -1,14 +1,11 @@
 package CDIO3.Tiles;
 
-import CDIO3.Player.Player;
-
-
 public abstract class Tile {
   protected Color color;
   protected String name;
   protected int tileNR;
   public int price;  
-  protected Player ownedby;
+  protected int ownedby;
 
 
   public Tile(Color color, String name, int tileNR, int price, int ownedby){
@@ -34,7 +31,7 @@ public abstract class Tile {
   public int getOwnedBy() {
     return ownedby;
   }  
-  public void setOwnedBy(Player newOwner) {
+  public void setOwnedBy(int newOwner) {
     this.ownedby = newOwner;
   }
 }
