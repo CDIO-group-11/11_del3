@@ -5,9 +5,9 @@ public class Wallet {
     int $;
 
     public Wallet() {
-        if (Player.Pamount == 4){
+        if (Player.PlayerAmount == 4){
             $ = 16;
-        } else if (Player.Pamount == 3){
+        } else if (Player.PlayerAmount == 3){
             $ = 18;
         } else {
             $ = 20;
