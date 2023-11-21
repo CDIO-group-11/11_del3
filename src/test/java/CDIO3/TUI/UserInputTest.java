@@ -1,14 +1,15 @@
 package CDIO3.TUI;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import CDIO3.InReplace;
 
@@ -24,13 +25,13 @@ public class UserInputTest {
     newOut = new ByteArrayOutputStream(), 
     newErr = new ByteArrayOutputStream();
     InReplace newIn = new InReplace();
-  @Before
+  @BeforeAll
   public void setStream(){
     System.setOut(new PrintStream(newOut));
     System.setErr(new PrintStream(newErr));
     System.setIn(newIn);
   }
-  @After
+  @AfterAll
   public void recoverStream(){
     System.setOut(orgOut);
     System.setErr(orgErr);
