@@ -16,7 +16,14 @@ public class Deck {
     }
 
     public Card draw(){
-        
+        if(k <= deck.length) {
+            k++;
+            return deck[k-1];
+            
+        }
+        shuffle();
+        k = 0;
+        return deck[k];
     }
 
 
