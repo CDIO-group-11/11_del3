@@ -12,7 +12,7 @@ import CDIO3.Tiles.Board;
  */
 public class App {
   private static Player[] players;
-  private static RaffleCup cup = new RaffleCup(2,6);
+  private static RaffleCup cup = new RaffleCup(1,6);
   private static TUI_Manager TUI;
   private static Board table;
   private static int currentPlayer;
@@ -24,12 +24,11 @@ public class App {
     }
     table = new Board();
     TUI = new TUI_Manager(table);
-    int die0 = -1, die1 = -1; 
+    int die0 = -1; 
     while (true) {
-      TUI.readTurn(die0,die1,currentPlayer,players);
+      TUI.readTurn(die0,currentPlayer,players);
       cup.roll();
       die0 = cup.getSides()[0];
-      die1 = cup.getSides()[1];
       players[currentPlayer].getPiece();
     }
   }
