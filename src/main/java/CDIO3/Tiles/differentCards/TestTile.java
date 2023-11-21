@@ -9,10 +9,10 @@ import CDIO3.Tiles.Tile;
 public class TestTile extends Tile {
 
   public TestTile(int tileNR) {
-    super(Color.values()[(int)(Math.random()*Color.values().length)], "Testing Tile", tileNR);
+    super(Color.values()[(int)(Math.random()*Color.values().length)], "Testing Tile", tileNR, 2 , -1);
   }
   public TestTile() {
-    super(Color.values()[(int)(Math.random()*Color.values().length)], "Testing Tile", (int)(Math.random()*24));
+    super(Color.values()[(int)(Math.random()*Color.values().length)], "Testing Tile", (int)(Math.random()*24),2 , -1);
   }
   
 }
