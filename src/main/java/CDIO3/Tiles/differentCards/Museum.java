@@ -7,7 +7,7 @@ import CDIO3.Tiles.Tile;
 public class Museum extends Tile{
 
     public Museum(int tileNR) {
-        super(Color.brown, "Museum", tileNR);
+        super(Color.brown, "Museum", tileNR, 2);
     }
 
 }
