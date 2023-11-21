@@ -4,6 +4,7 @@ import CDIO3.deck.specificCards.*;
 
 public class Deck {
     private Card[] deck = new Card[20];
+    int k = 0;
 
     public Deck() {
         deck = new Card[]{
