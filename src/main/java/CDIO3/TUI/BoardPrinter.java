@@ -81,11 +81,20 @@ public class BoardPrinter {
     boardPieces[tile].inspect();
   }
   public static void guide() {
-    System.out.println(
+    System.out.print(
       "┌──────────────┐\n"+
       "│████color█████│\n"+
       "├─────┬────────┤\n"+
-      "│owner│#tile nr│"
+      "│owner│#tile nr│\n"
     );
+  }
+  public int[] getOrder() {
+    int[] out = new int[24];
+    
+    for (int i = 0; i < out.length; i++) {
+      out[i] = boardPieces[i].getTileNR();
+    }
+
+    return out;
   }
 }
