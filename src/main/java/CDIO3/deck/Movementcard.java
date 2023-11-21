@@ -1,5 +1,7 @@
 package CDIO3.deck;
 
 public class Movementcard extends Card {
-    //ToDo move og land on
+    //TODO move og land on
+
+    
 }
