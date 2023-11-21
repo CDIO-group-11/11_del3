@@ -11,11 +11,11 @@ public class App
         System.out.println( "Hello World!" );
     }
 
-    public static String[] getOwnerList() {
-      return null;
-    }
+  public static String[] getOwnerList() {
+    return null;
+  }
 
-    public static String[] playerPossitionList() {
-      return null;
-    }
+  public static String[] playerPossitionList() {
+    return null;
+  }
 }
