@@ -15,8 +15,5 @@ public class Player {
     public String getPropertyDeeds() {
         return propertyDeeds;
     }
-    public Piece getPosition() {
-        return piece;
-    }
 
 }
