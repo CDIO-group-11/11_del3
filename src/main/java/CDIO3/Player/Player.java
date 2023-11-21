@@ -5,6 +5,7 @@ public class Player {
     Wallet wallet = new Wallet();
     int piece;
     String propertyDeeds;
+    int[] tilesowned;
 
     public Wallet getWallet() {
         return wallet;
@@ -15,5 +16,7 @@ public class Player {
     public String getPropertyDeeds() {
         return propertyDeeds;
     }
-
+    public int[] getTilesOwned() {
+        return tilesowned;
+    }
 }
