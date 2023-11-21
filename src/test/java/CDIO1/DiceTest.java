@@ -1,14 +1,21 @@
 package CDIO1;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 public class DiceTest {
-  private static RaffleCup cup = new RaffleCup(2, 6); 
-
+  private static RaffleCup cup; 
+  private static int runCount;
+  @BeforeAll
+  public static void runCount(){
+    runCount = 1000;
+    cup = new RaffleCup(2, 6);
+  }
   @Test
-  private static void isFair(int runCount) {
+  public void isFair() {
+    
     int[] sides = new int[6];
     for (int i = 0; i < runCount; i++) {
       cup.roll();
@@ -36,17 +43,16 @@ public class DiceTest {
       Math.pow(6 - mean, 2) * (1d / 6d)
     );
     String out = "dice fairness\n\tmean: " + mean + "\n\tdeviation: " + deviation;
-    if(
-      deviation > (fairDeviation * 1.1d) &&
-      deviation < (fairDeviation / 1.1d) && 
-      mean > (fairMean) * 1.1d && 
-      mean < (fairMean) / 1.1d
-    ){
-      fail(out);
-    }
+    assertTrue(
+      deviation < (fairDeviation * 1.1d) &&
+      deviation > (fairDeviation / 1.1d) && 
+      mean < (fairMean) * 1.1d && 
+      mean > (fairMean) / 1.1d,
+      out
+    );
   }
   @Test
-  private static void isFast(int runCount) {
+  public void isFast() {
     int i = 0;
     long end = 0;
     long start = System.currentTimeMillis();
@@ -57,8 +63,9 @@ public class DiceTest {
     end = System.currentTimeMillis();
     System.out.print("\n".repeat(10));
     String out = "dice speed\n\ttime taken " + (double)(end-start) + "ms\n\tallowed: " + ((333d+1d/3d)*runCount) + "ms";
-    if((end-start)/runCount > (333f + 1f/3f)){
-      fail(out);
-    }
+    assertTrue(
+      (end-start)/runCount < (333f + 1f/3f),
+      out
+    );
   }
 }
