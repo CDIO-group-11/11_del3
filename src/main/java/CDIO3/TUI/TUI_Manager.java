@@ -1,5 +1,6 @@
 package CDIO3.TUI;
 
+import CDIO3.Player.Player;
 import CDIO3.Tiles.Board;
 
 public class TUI_Manager {
@@ -14,7 +15,7 @@ public class TUI_Manager {
    */
   public void readTurn(int die1, int die2, int currentPlayer, Player[] players){
     while (true) {
-      Commands command = UserInput.getCommand(actions,"please choose and action");
+      Commands command = UserInput.getCommand(actions,"please choose an action");
       switch (command) {
         case detail:
           System.out.println("details");
