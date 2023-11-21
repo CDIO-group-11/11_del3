@@ -27,9 +27,15 @@ public abstract class Tile {
     return tileNR;
   }
   public int getPrice() {
-  return price;
+    return price;
   }
   public int getOwnedBy() {
-  return ownedby;
+    return ownedby;
   }  
+  public int getOwnedBy() {
+    return ownedby;
+  }  
+  public void setOwnedBy(int newOwner) {
+    this.ownedby = newOwner;
+  }
 }
