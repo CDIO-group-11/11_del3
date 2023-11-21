@@ -80,4 +80,13 @@ public class CommandTUITest {
     assertEquals("\033[1;1H",new String (newOut.toByteArray()));
     newOut.reset();
   }
+  @Test
+  public void clearTest(){
+    CommandTUI.clearAll();
+    assertEquals("\033[2J",new String (newOut.toByteArray()));
+    newOut.reset();
+    CommandTUI.clearLine();
+    assertEquals("\r\033[1J",new String (newOut.toByteArray()));
+    newOut.reset();
+  }
 }
