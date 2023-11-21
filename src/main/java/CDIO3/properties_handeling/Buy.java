@@ -11,11 +11,11 @@ public class Buy {
         return false;
     }
 
-    public static boolean buytial(Tile tile, Player player) {
+    public static boolean buytial(Tile tile, Player player, int currentPlayer) {
         if(HaveMoney(tile.price, player.getWallet().get$())){
             player.setOwnedBy(tile.getNumber());
             player.getWallet().addMoney(-tile.price);
-            tile.setOwnedBy(1);
+            tile.setOwnedBy(currentPlayer);
 
             return true;
         } 
