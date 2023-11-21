@@ -13,7 +13,7 @@ public class TUI_Manager {
    * reads a user input and shows the user the requested information to the user
    * @return on roll command, when the  user rolls
    */
-  public void readTurn(int die1, int die2, int currentPlayer, Player[] players){
+  public void readTurn(int die1, int currentPlayer, Player[] players){
     while (true) {
       Commands command = UserInput.getCommand(actions,"please choose an action");
       switch (command) {
