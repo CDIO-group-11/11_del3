@@ -2,13 +2,20 @@ package CDIO1;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class DiceTest {
-  private static RaffleCup cup = new RaffleCup(2, 6); 
-
+  private static RaffleCup cup; 
+  private static int runCount;
+  @BeforeAll
+  public static void runCount(){
+    runCount = 1000;
+    cup = new RaffleCup(2, 6);
+  }
   @Test
-  private static void isFair(int runCount) {
+  public void isFair() {
+    
     int[] sides = new int[6];
     for (int i = 0; i < runCount; i++) {
       cup.roll();
@@ -45,7 +52,7 @@ public class DiceTest {
     );
   }
   @Test
-  private static void isFast(int runCount) {
+  public void isFast() {
     int i = 0;
     long end = 0;
     long start = System.currentTimeMillis();
