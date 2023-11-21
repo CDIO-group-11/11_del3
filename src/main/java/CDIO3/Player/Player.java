@@ -9,7 +9,7 @@ public class Player {
     public Wallet getWallet() {
         return wallet;
     }
-    public int getPiece() {
+    public Piece getPiece() {
         return piece;
     }
     public String getPropertyDeeds() {
