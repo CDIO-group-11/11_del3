@@ -17,8 +17,8 @@ public class Buy {
             player.getWallet().addMoney(-tile.price);
             tile.setOwnedBy(currentPlayer);
 
-            return true;
+            return true; // returns true if its a successful purchase
         } 
-        return false;
+        return false; // returns false if player do not have enough money
     }
 }
