@@ -7,7 +7,7 @@ import CDIO3.Tiles.Tile;
 public class Swimming extends Tile{
 
     public Swimming(int tileNR) {
-        super(Color.brown, "Swimming pool", tileNR, 2);
+        super(Color.brown, "Swimming pool", tileNR, 2, -1);
     }
     
    
