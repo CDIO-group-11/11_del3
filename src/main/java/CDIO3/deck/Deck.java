@@ -14,6 +14,12 @@ public class Deck {
         };
         shuffle();
     }
+
+    public Card draw(){
+        
+    }
+
+
     private void shuffle(){
         for(int i = 0; i < 10; i++){
             for (int j = 0; j < deck.length; j++) {
