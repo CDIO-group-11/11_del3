@@ -4,6 +4,7 @@ import CDIO3.deck.specificCards.*;
 
 public class Deck {
     private Card[] deck = new Card[20];
+    int k = 0;
 
     public Deck() {
         deck = new Card[]{
@@ -16,7 +17,14 @@ public class Deck {
     }
 
     public Card draw(){
-        
+        if(k <= deck.length) {
+            k++;
+            return deck[k-1];
+            
+        }
+        shuffle();
+        k = 0;
+        return deck[k];
     }
 
 
