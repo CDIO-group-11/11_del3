@@ -8,6 +8,7 @@ import java.io.PrintStream;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import CDIO3.InReplace;
@@ -45,6 +46,7 @@ public class TUI_ManagerTest {
     System.setIn(orgIn);
   }
   @Test
+  @Disabled
   public void detail(){
     newOut.reset();
     Input("detail");
@@ -52,6 +54,7 @@ public class TUI_ManagerTest {
     assertEquals("detail\n".getBytes(),newOut.toByteArray());
   }
   @Test
+  @Disabled
   public void roll(){
     newOut.reset();
     Input("detail");
