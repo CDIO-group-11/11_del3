@@ -15,7 +15,7 @@ public class Buy {
         if(HaveMoney(tile.price, player.getWallet().get$())){
             player.setOwnedBy(tile.getNumber());
             player.getWallet().addMoney(-tile.price);
-            tile.setOwnedBy(player);
+            tile.setOwnedBy(1);
 
             return true;
         } 
