@@ -6,25 +6,32 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import CDIO3.InReplace;
 
 public class CommandTUITest {
-    static PrintStream 
-  orgOut = System.out,
-  orgErr = System.err;
+  static PrintStream 
+    orgOut = System.out,
+    orgErr = System.err;
   static InputStream orgIn  = System.in;
   static ByteArrayOutputStream 
-  newOut = new ByteArrayOutputStream(), 
-  newErr = new ByteArrayOutputStream();
+    newOut = new ByteArrayOutputStream(), 
+    newErr = new ByteArrayOutputStream();
   static InReplace newIn = new InReplace();
   @BeforeAll
   public static void setStream(){
     System.setOut(new PrintStream(newOut));
     System.setErr(new PrintStream(newErr));
     System.setIn(newIn);
+  }
+  @AfterAll
+  public static void recoverStream(){
+    System.setOut(orgOut);
+    System.setErr(orgErr);
+    System.setIn(orgIn);
   }
   @Test
   public void upTest(){
