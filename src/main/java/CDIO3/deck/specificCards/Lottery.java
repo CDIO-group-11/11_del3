@@ -1,4 +1,4 @@
-package CDIO3.deck.specicCards;
+package CDIO3.deck.specificCards;
 
 import CDIO3.deck.Moneycard;
 
