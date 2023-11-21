@@ -1,6 +1,5 @@
 package CDIO3.TUI;
 
-import CDIO3.App;
 import CDIO3.Tiles.Tile;
 import CDIO3.Tiles.differentCards.TestTile;
 
@@ -56,6 +55,6 @@ public class CornerPiece implements BoardPiece {
   public void inspect() {
     System.out.println("tile name: " + tile.getName());
     System.out.println("tile nr: " + tile.getNumber());
-    System.out.println("players on this tile: " + App.playerPossitionList()[tile.getNumber()]);
+    // System.out.println("players on this tile: " + App.playerPossitionList()[tile.getNumber()]);
   }
 }
