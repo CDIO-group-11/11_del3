@@ -1,6 +1,7 @@
 package CDIO3.TUI;
 
 import CDIO3.Tiles.Tile;
+import CDIO3.Tiles.differentCards.TestTile;
 
 public class CornerPiece implements BoardPiece {
   public String[] pieceLines;
@@ -19,8 +20,11 @@ public class CornerPiece implements BoardPiece {
   height = 4;
 
   public CornerPiece(Tile tile) {
-    pieceLines = generate(tile);
     this.tile = tile;
+    if(this.tile == null){
+      this.tile = new TestTile();
+    }
+    pieceLines = generate(this.tile);
   }
   private String[] generate(Tile tile){
     String[] lines = new String[4];
@@ -51,7 +55,6 @@ public class CornerPiece implements BoardPiece {
   public void inspect() {
     System.out.println("tile name: " + tile.getName());
     System.out.println("tile nr: " + tile.getNumber());
-    System.out.println("tile color: " + tile.getColor().name());
-    System.out.println("players in this tile: " + tile.playerList());
+    // System.out.println("players on this tile: " + App.playerPossitionList()[tile.getNumber()]);
   }
 }

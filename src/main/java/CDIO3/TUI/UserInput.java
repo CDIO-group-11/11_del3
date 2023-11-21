@@ -6,13 +6,32 @@ import CDIO3.Tiles.Color;
 
 public class UserInput {
   private static Scanner scan = new Scanner(System.in);
+  
+  public static int getInt(String message, int min, int max){
+    while (true) {
+      int in = getInt(message);
+      if(in > max) {
+        CommandTUI.clearAll();
+        System.out.println("number may not be above: " + max);
+        continue;
+      }
+      if(in < min) {
+        CommandTUI.clearAll();
+        System.out.println("number may not be below: " + min);
+        continue;
+      }
+      return in;
+    }
+  }
   public static int getInt(String message){
     while (true) {
       System.out.println(message);
       String in = scan.nextLine();
       try{
+      CommandTUI.clearAll();
         return Integer.parseInt(in);
       }catch(NumberFormatException ignore){
+        CommandTUI.clearAll();
         System.out.println("only whole numbers accepted (as numerals)");
       }
     }
@@ -23,9 +42,11 @@ public class UserInput {
       String in = scan.nextLine();
       for (int i = 0; i < Color.values().length; i++) {
         if(Color.values()[i].name().equals(in)){
+      CommandTUI.clearAll();
           return Color.values()[i];
         }
       }
+      CommandTUI.clearAll();
       System.out.println("only these colors are accepted:");
       for (int i = 0; i < Color.values().length; i++) {
         System.out.println("\t" + Color.values()[i].name());
@@ -40,6 +61,7 @@ public class UserInput {
     String in = getCommand(message, commands, actions);
     for (int i = 0; i < Commands.values().length; i++) {
       if(in.equals(Commands.values()[i].name().toLowerCase())){
+        CommandTUI.clearAll();
         return Commands.values()[i];
       }
     }
@@ -54,14 +76,18 @@ public class UserInput {
       String in = scan.nextLine().toLowerCase();
       for (int i = 0; i < commands.length; i++) {
         if(in.equals(commands[i].toLowerCase())){
+          CommandTUI.clearAll();
           return commands[i];
         }
       }
+      CommandTUI.clearAll();
       System.out.println("only these commands are accepted:");
       for (int i = 0; i < commands.length; i++) {
         System.out.print("\t" + commands[i]);
-        if(actions[i] != null){
+        if(i < actions.length && actions[i] != null){
           System.out.println("\t\t" + actions[i]);
+        }else{
+          System.out.println();
         }
       }
     }
