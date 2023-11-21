@@ -3,11 +3,11 @@ package CDIO3.Tiles;
 public abstract class Tile {
   protected Color color;
   protected String name;
-  protected int number;
-  public Tile(Color color, String name, int number){
+  protected int tileNR;
+  public Tile(Color color, String name, int tileNR){
     this.color = color;
     this.name = name;
-    this.number= number;
+    this.tileNR = tileNR;
   }
   public String getName() {
     return name;
@@ -16,6 +16,6 @@ public abstract class Tile {
     return color;
   }
   public int getNumber() {
-    return number;
+    return tileNR;
   }
 }
