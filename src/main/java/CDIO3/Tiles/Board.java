@@ -50,6 +50,11 @@ public class Board {
     tiles[21] = new Chance(21);
     tiles[22] = new Park(22);
     tiles[23] = new Beach(23);
+
+    for (int i = 0; i < tiles.length; i++) {
+      if(tiles[i] == null) 
+        tiles[i] = new TestTile(i);
+    }
   }
   public Tile getTile(int index){
     return tiles[index];
