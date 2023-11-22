@@ -10,5 +10,9 @@ public class Skate extends Tile{
         super(Color.brown, "Skate park", tileNR, 2, -1);
     }
     
-
+    @Override
+    public void landOn() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+    }
 }
