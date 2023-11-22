@@ -10,5 +10,9 @@ public class Chance extends Tile{
         super(Color.brown, "Chance", tileNR, 0, -1);
     }
 
-
+    @Override
+    public void landOn() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+    }
 }

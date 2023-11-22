@@ -9,6 +9,10 @@ public class Candy extends Tile{
     public Candy(int tileNR) {
         super(Color.brown, "Candy store", tileNR, 1, -1);
     }
-
+    @Override
+    public void landOn() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+    }
 
 }

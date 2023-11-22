@@ -20,4 +20,7 @@ public class Piece {
         piece %= 25;
     }
 
+    public int getPosition() {
+        return piece;
+    }
 }
