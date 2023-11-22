@@ -4,7 +4,13 @@ import CDIO3.Player.Player;
 import CDIO3.Tiles.Board;
 
 public class TUI_Manager {
-  private final static String [] actions = new String[]{"se information about all players","roll for this turn"};
+  private final static String [] actions = new String[]{
+    "se information about all players",
+    "roll for this turn",
+    "take a closer look at a tile",
+    "learn how to read a tile",
+    "see the intire board"
+  };
   private BoardPrinter print;
   public TUI_Manager(Board toBePrinted){
     print = new BoardPrinter(toBePrinted);

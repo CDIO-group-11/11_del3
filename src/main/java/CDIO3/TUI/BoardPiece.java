@@ -4,4 +4,6 @@ public interface BoardPiece {
   public String getLine(int lineID);
 
   public void inspect();
+
+  public int getTileNR();
 }

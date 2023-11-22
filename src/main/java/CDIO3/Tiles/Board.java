@@ -1,5 +1,6 @@
 package CDIO3.Tiles;
 
+import CDIO3.Tiles.differentCards.TestTile;
 import CDIO3.Tiles.differentCards.Arcade;
 import CDIO3.Tiles.differentCards.Bowling;
 import CDIO3.Tiles.differentCards.Burger;
@@ -16,7 +17,6 @@ import CDIO3.Tiles.differentCards.Pizza;
 import CDIO3.Tiles.differentCards.Skate;
 import CDIO3.Tiles.differentCards.Start;
 import CDIO3.Tiles.differentCards.Swimming;
-import CDIO3.Tiles.differentCards.TestTile;
 import CDIO3.Tiles.differentCards.Toy;
 import CDIO3.Tiles.differentCards.Vjail;
 import CDIO3.Tiles.differentCards.Zoo;
@@ -57,6 +57,6 @@ public class Board {
     }
   }
   public Tile getTile(int index){
-    return tiles[index];
+    return tiles[index] != null ? tiles[index] : new TestTile(index);
   }
 }
