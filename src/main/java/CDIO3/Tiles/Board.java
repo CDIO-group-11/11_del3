@@ -20,6 +20,8 @@ import CDIO3.Tiles.differentCards.TestTile;
 import CDIO3.Tiles.differentCards.Toy;
 import CDIO3.Tiles.differentCards.Vjail;
 import CDIO3.Tiles.differentCards.Zoo;
+import CDIO3.Tiles.differentCards.Park;
+import CDIO3.Tiles.differentCards.Beach;
 
 public class Board {
   private Tile[] tiles = new Tile[24];
