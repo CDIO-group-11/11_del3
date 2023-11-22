@@ -6,6 +6,6 @@ import CDIO3.Tiles.Tile;
 public class Pizza extends Tile{
 
     public Pizza(int tileNR) {
-        super(Color.brown, "Pizza house", tileNR);
+        super(Color.brown, "Pizza house", tileNR, 1, -1);
     }
 }
