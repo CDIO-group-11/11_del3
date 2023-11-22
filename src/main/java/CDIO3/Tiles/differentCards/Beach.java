@@ -4,12 +4,11 @@ package CDIO3.Tiles.differentCards;
 import CDIO3.Tiles.Color;
 import CDIO3.Tiles.Tile;
 
-public class Skate extends Tile{
+public class Beach extends Tile{
 
-    public Skate(int tileNR) {
-        super(Color.brown, "Skate park", tileNR, 2, -1);
+    public Beach(int tileNR) {
+        super(Color.brown, "Beach", tileNR, 4, -1);
     }
-    
     @Override
     public void landOn() {
         // TODO Auto-generated method stub

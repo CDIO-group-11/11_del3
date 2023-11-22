@@ -17,7 +17,7 @@ public class App {
   private static Board table;
   private static int currentPlayer;
   public static void main( String[] args ){
-    int playerCount = UserInput.getInt("how many players will be in the game? ",2,4);
+    int playerCount = UserInput.getInt("How many players will be in the game? ",2,4);
     players = new Player[playerCount];
     for (int i = 0; i < playerCount ; i++) {
       players[i] = new Player();
