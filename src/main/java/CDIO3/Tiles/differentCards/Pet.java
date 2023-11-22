@@ -10,5 +10,9 @@ public class Pet extends Tile{
         super(Color.brown, "Pet store", tileNR, 3, -1);
     }
     
-  
+    @Override
+    public void landOn() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+    }
 }

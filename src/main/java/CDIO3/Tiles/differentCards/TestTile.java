@@ -14,5 +14,9 @@ public class TestTile extends Tile {
   public TestTile() {
     super(Color.values()[(int)(Math.random()*Color.values().length)], "Testing Tile", (int)(Math.random()*24),1,-1);
   }
-  
+  @Override
+  public void landOn() {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+  }
 }
