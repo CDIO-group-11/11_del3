@@ -19,4 +19,7 @@ public class Player {
     public int[] getTilesOwned() {
         return tilesowned;
     }
+    public void setOwnedBy(int newtilesownednr) {
+        tilesowned[tilesowned.length + 1] = newtilesownednr;
+    }
 }
