@@ -7,8 +7,12 @@ import CDIO3.Tiles.Tile;
 public class Gjail extends Tile{
 
     public Gjail(int tileNR) {
-        super(Color.brown, "Go to jail", tileNR);
+        super(Color.brown, "Go to jail", tileNR, 0, -1);
     }
 
-
+    @Override
+    public void landOn() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+    }
 }
