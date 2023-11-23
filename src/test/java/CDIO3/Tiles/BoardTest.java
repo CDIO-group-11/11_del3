@@ -1,0 +1,43 @@
+package CDIO3.Tiles;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
+import org.junit.jupiter.api.Test;
+
+public class BoardTest {
+  Board b = new Board();
+  @Test
+  public void correctTilesEng(){
+    String[] correct = new String[]{
+      "Start",
+      "Burger joint",
+      "Pizza house",
+      "Chance",
+      "Candy store",
+      "Ice cream parlour",
+      "Visiting in jail",
+      "Museum",
+      "Library",
+      "Chance",
+      "Skate park",
+      "Swimming pool",
+      "Free parking",
+      "Video game arcade",
+      "Movie theatre",
+      "Chance",
+      "Toy store",
+      "Pet store",
+      "Go to jail",
+      "Bowling alley",
+      "The zoo",
+      "Chance",
+      "Water park",
+      "Beach promenade"
+    };
+    String[] t = new String[24];
+    for (int i = 0; i < t.length; i++) {
+      t[i] = b.getTile(i).getName();
+    }
+    assertArrayEquals(t, correct);
+  }
+}
