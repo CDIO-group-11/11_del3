@@ -1,4 +1,4 @@
-package CDIO3.properties_handeling;
+package CDIO3.PropertiesHandeling;
 
 import CDIO3.Player.Player;
 import CDIO3.Tiles.Tile;
