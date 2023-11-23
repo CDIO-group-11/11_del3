@@ -36,13 +36,13 @@
 			<artifactId>junit-jupiter</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
   <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-engine</artifactId>
     <version>5.3.1</version>
     <scope>test</scope>
 </dependency>
+	</dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -86,10 +86,10 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-        <plugin>
+        <!-- <plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.1</version>
-			</plugin>
+			</plugin> -->
       </plugins>
     </pluginManagement>
   </build>
