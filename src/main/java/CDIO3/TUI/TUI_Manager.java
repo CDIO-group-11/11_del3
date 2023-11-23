@@ -9,7 +9,7 @@ public class TUI_Manager {
     "roll for this turn",
     "take a closer look at a tile",
     "learn how to read a tile",
-    "see the intire board"
+    "see the entire board"
   };
   private BoardPrinter print;
   public TUI_Manager(Board toBePrinted){
