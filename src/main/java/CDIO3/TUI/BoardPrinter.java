@@ -1,11 +1,11 @@
 package CDIO3.TUI;
 
+import CDIO3.App;
 import CDIO3.Tiles.Board;
 import CDIO3.Tiles.Tile;
 
 public class BoardPrinter {
   private BoardPiece[] boardPieces;
-  private String[] owners = new String[24];
   public BoardPrinter(Board board){
     BoardPiece[] tempPieces = new BoardPiece[24];
     for (int i = 0; i < 24; i++) {
@@ -62,12 +62,6 @@ public class BoardPrinter {
     }
     return out;
   }
-  public void setOwner(int tileID, String owner){
-    owners[tileID] = owner;
-  }
-  public void setOwner(Tile tile, String owner){
-    owners[tile.getNumber()-1] = owner;
-  }
   private String setOwner(String board, String[] owners){
     for (int i = 0; i < owners.length; i++) {
       board = board.replace(new String(Character.toChars(0xE000 + i)), (owners[i] != null ? owners[i] : " "));
@@ -75,7 +69,7 @@ public class BoardPrinter {
     return board;
   }
   public void print(){
-    System.out.println(setOwner(BoardAssembler(),owners));
+    System.out.println(setOwner(BoardAssembler(),App.getOwnerList()));
   }
   public void inspect(int tile) {
     boardPieces[tile].inspect();

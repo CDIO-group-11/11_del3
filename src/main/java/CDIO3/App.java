@@ -5,6 +5,7 @@ import CDIO3.Player.Player;
 import CDIO3.TUI.TUI_Manager;
 import CDIO3.TUI.UserInput;
 import CDIO3.Tiles.Board;
+import CDIO3.Tiles.Tile;
 
 /**
  * Hello world!
@@ -17,7 +18,7 @@ public class App {
   private static Board table;
   private static int currentPlayer;
   public static void main( String[] args ){
-    int playerCount = UserInput.getInt("How many players will be in the game? ",2,4);
+    int playerCount = UserInput.getInt("how many players will be in the game? ",2,4);
     players = new Player[playerCount];
     for (int i = 0; i < playerCount ; i++) {
       players[i] = new Player();
@@ -29,15 +30,30 @@ public class App {
       TUI.readTurn(die0,currentPlayer,players);
       cup.roll();
       die0 = cup.getSides()[0];
-      players[currentPlayer].getPiece();
+      players[currentPlayer].getPiece().move(die0);
+      Tile land = table.getTile(players[currentPlayer].getPiece().getPosition());
+      land.landOn();
     }
   }
 
   public static String[] getOwnerList() {
-    return null;
-  }
-
-  public static String[] playerPossitionList() {
-    return null;
+    String[] owners = new String[24];
+    for (int i = 0; i < owners.length; i++) {
+      switch(table.getTile(i).getOwnedBy()){
+        case 0:
+        owners[i] = "@";
+        break;
+        case 1:
+        owners[i] = "£";
+        break;
+        case 2:
+        owners[i] = "$";
+        break;
+        case 3:
+        owners[i] = "€";
+        break;
+      }
+    }
+    return owners;
   }
 }
