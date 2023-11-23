@@ -1,7 +1,8 @@
 
 @echo off
-javac -sourcepath ./src/main/java/ -d ./bin/ -nowarn ./src/main/java/CDIO3/App.java
+call mvn test
+echo [2J[1;1H
 echo if there are problems with wierd characters/overlapping text, you shoud use runClean.bat instead
 pause
-java -cp ./bin/ CDIO3/App
+java -cp ./target/classes CDIO3/App -lang=eng
 Pause

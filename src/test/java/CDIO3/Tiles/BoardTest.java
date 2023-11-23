@@ -38,6 +38,6 @@ public class BoardTest {
     for (int i = 0; i < t.length; i++) {
       t[i] = b.getTile(i).getName();
     }
-    assertArrayEquals(t, correct);
+    assertArrayEquals(correct, t);
   }
 }
