@@ -8,7 +8,7 @@ import CDIO3.lang.Lang;
 public class Arcade extends Tile{
 
     public Arcade(int tileNR) {
-        super(Color.brown, Lang.getSring(1), tileNR, 3, -1);
+        super(Color.red, Lang.getSring(1), tileNR, 3, -1);
     }
 
     @Override

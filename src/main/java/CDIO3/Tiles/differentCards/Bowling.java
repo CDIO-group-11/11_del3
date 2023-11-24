@@ -8,7 +8,7 @@ import CDIO3.lang.Lang;
 public class Bowling extends Tile{
 
     public Bowling(int tileNR) {
-        super(Color.brown, Lang.getSring(3), tileNR, 4, -1);
+        super(Color.green, Lang.getSring(3), tileNR, 4, -1);
     }
 
     @Override

@@ -8,7 +8,7 @@ import CDIO3.lang.Lang;
 public class Library extends Tile{
 
     public Library(int tileNR) {
-        super(Color.brown, Lang.getSring(9), tileNR, 2, -1);
+        super(Color.pink, Lang.getSring(9), tileNR, 2, -1);
     }
     @Override
     public void landOn() {

@@ -8,7 +8,7 @@ import CDIO3.lang.Lang;
 public class Swimming extends Tile{
 
     public Swimming(int tileNR) {
-        super(Color.brown, Lang.getSring(18), tileNR, 2, -1);
+        super(Color.orange, Lang.getSring(18), tileNR, 2, -1);
     }
     
     @Override

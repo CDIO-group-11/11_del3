@@ -8,7 +8,7 @@ import CDIO3.lang.Lang;
 public class Candy extends Tile{
 
     public Candy(int tileNR) {
-        super(Color.brown, Lang.getSring(5), tileNR, 1, -1);
+        super(Color.blight_blue, Lang.getSring(5), tileNR, 1, -1);
     }
     @Override
     public void landOn() {

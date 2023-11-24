@@ -8,7 +8,7 @@ import CDIO3.lang.Lang;
 public class Beach extends Tile{
 
     public Beach(int tileNR) {
-        super(Color.brown, Lang.getSring(2), tileNR, 4, -1);
+        super(Color.dark_blue, Lang.getSring(2), tileNR, 5, -1);
     }
     @Override
     public void landOn() {

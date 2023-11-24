@@ -8,7 +8,7 @@ import CDIO3.lang.Lang;
 public class Pet extends Tile{
 
     public Pet(int tileNR) {
-        super(Color.brown, Lang.getSring(14), tileNR, 3, -1);
+        super(Color.yellow, Lang.getSring(14), tileNR, 3, -1);
     }
     
     @Override
