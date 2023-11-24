@@ -1,7 +1,7 @@
 package CDIO3.Player;
 
 public class Player {
-    public static int Pamount;
+    public static int PlayerAmount;
     Wallet wallet = new Wallet();
     int piece;
     String propertyDeeds;

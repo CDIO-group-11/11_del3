@@ -57,4 +57,8 @@ public class CornerPiece implements BoardPiece {
     System.out.println("tile nr: " + tile.getNumber());
     // System.out.println("players on this tile: " + App.playerPossitionList()[tile.getNumber()]);
   }
+  @Override
+  public int getTileNR() {
+    return tile.getNumber();
+  }
 }
