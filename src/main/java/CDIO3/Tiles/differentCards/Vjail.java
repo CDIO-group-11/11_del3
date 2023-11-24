@@ -11,5 +11,9 @@ public class Vjail extends Tile{
         super(Color.brown, "Visiting in jail", tileNR, 0, -1);
     }
     
-   
+    @Override
+    public void landOn() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+    }
 }

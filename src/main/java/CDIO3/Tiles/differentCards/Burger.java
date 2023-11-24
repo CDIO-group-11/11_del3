@@ -10,5 +10,9 @@ public class Burger extends Tile{
         super(Color.brown, "Burger joint", tileNR, 1, -1);
     }
 
-
+    @Override
+    public void landOn() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+    }
 }

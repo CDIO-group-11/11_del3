@@ -1,21 +1,19 @@
 package CDIO3.Tiles;
 
-
 public abstract class Tile {
   protected Color color;
   protected String name;
   protected int tileNR;
   public int price;  
-  protected int ownedby;
+  protected int ownedBy;
 
 
-  public Tile(Color color, String name, int tileNR, int price, int ownedby){
+  public Tile(Color color, String name, int tileNR, int price, int ownedBy){
     this.color = color;
     this.name = name;
     this.tileNR = tileNR;
     this.price = price;
-    this.ownedby = ownedby;
-    
+    this.ownedBy = ownedBy;
   }
   public String getName() {
     return name;
@@ -30,13 +28,11 @@ public abstract class Tile {
     return price;
   }
   public int getOwnedBy() {
-    return ownedby;
-  }  
-  public int getOwnedBy() {
-    return ownedby;
+    return ownedBy;
   }  
   public void setOwnedBy(int newOwner) {
-    this.ownedby = newOwner;
+    this.ownedBy = newOwner;
   }
+  abstract public void landOn();
 }
 
