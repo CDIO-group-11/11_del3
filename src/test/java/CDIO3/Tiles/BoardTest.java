@@ -4,10 +4,14 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.jupiter.api.Test;
 
+import CDIO3.lang.Lang;
+import CDIO3.lang.Language;
+
 public class BoardTest {
   Board b = new Board();
   @Test
   public void correctTilesEng(){
+    Lang.setLang(Language.dk);
     String[] correct = new String[]{
       "Go",
       "Burger joint",
@@ -41,6 +45,7 @@ public class BoardTest {
     assertArrayEquals(correct, t);
   }
     public void correctTilesDan(){
+    Lang.setLang(Language.en);
     String[] correct = new String[]{
       "Start",
       "Burgerbaren",
