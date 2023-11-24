@@ -53,14 +53,16 @@ public class UserInput {
       }
     }
   }
-  public static Commands getCommand(String[] actions, String message){
+  public static Commands getCommand(String message){
     String[] commands = new String[Commands.values().length];
+    String[] actions = new String[Commands.values().length];
     for (int i = 0; i < commands.length; i++) {
       commands[i] = Commands.values()[i].name();
+      actions [i] = Commands.values()[i].message;
     }
     String in = getCommand(message, commands, actions);
     for (int i = 0; i < Commands.values().length; i++) {
-      if(in.equals(Commands.values()[i].name().toLowerCase())){
+      if(in.toLowerCase().equals(Commands.values()[i].name().toLowerCase())){
         CommandTUI.clearAll();
         return Commands.values()[i];
       }
@@ -70,7 +72,7 @@ public class UserInput {
   public static String getCommand(String message, String[] commands){
     return getCommand(message, commands, new String[commands.length]);
   }
-    public static String getCommand(String message, String[] commands, String[] actions){
+  public static String getCommand(String message, String[] commands, String[] actions){
     while (true) {
       System.out.println(message);
       String in = scan.nextLine().toLowerCase();
