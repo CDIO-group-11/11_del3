@@ -17,7 +17,7 @@ public class Piece {
     //Tilføjer dice værdi til nuværende position og sikre sig det ikke er over 24 (Støresle på board)
     public void move(int sum){
         piece += sum;
-        piece %= 25;
+        piece %= 24;
     }
 
     public void setPosition(int newPosition) {
