@@ -1,6 +1,7 @@
 
 @echo off
 call mvn test
+pause
 echo [2J[1;1H
 javac -sourcepath ./src/main/java/ -d ./bin/ -encoding ISO-8859-1 -nowarn ./src/main/java/CDIO3/App.java
 echo if there are problems with wierd characters/overlapping text, you shoud use runClean.bat instead
