@@ -8,28 +8,28 @@ public class Lang {
   private static String[]
 
 
-  playerCount = new String[] {"how many players will be in the game? ","Hvor mange spillere spiller med?"},
-  arcade = new String[] {"Video game arcade","Video spils kabinet"},//tile
-  beach = new String[] {"Beach","Strand"},
-  bowling = new String[] {"Bowling alley","DK"},
-  burger = new String[] {"Burger joint","DK"}, //tile
-  candy = new String[] {"Candy store","DK"},//tile
-  chance = new String[] {"Chance","DK"},//tile
-  goJail = new String[] {"Go to jail","DK"},//tile
-  ice = new String[] {"Ice cream parlour", "DK"},//tile
-  library = new String[] {"Library","DK"}, //tile
-  movie = new String[] {"Movie theatre", "DK"},//tile
-  museum = new String[] {"Museum","DK"},//tile
-  park = new String[] {"Park place", "DK"},//tile
-  parking = new String[] {"Free parking", "DK"},//tile
-  pet = new String[] {"Pet store","DK"},//tile
-  pizza = new String[] {"Pizza house","DK"},//tile
-  skate = new String[] {"Skate park", "DK"},
-  start = new String[] {"Start", "DK"},
-  swim = new String[] {"Swimming pool","DK"},
-  toy = new String[] {"Toy store","DK"},
-  visitJail = new String[] {"Visiting in jail","DK"},
-  zoo = new String[] {"The zoo","DK"},
+  playerCount = new String[] {"how many players will be in the game? ","Hvor mange spillere spiller med? "},
+  arcade = new String[] {"Video game arcade","Spillehallen"},//tile
+  beach = new String[] {"Beach","Strandpromenaden"},
+  bowling = new String[] {"Bowling alley","Bowlinghallen"},
+  burger = new String[] {"Burger joint","Burgerbaren"}, //tile
+  candy = new String[] {"Candy store","Slikbutikken"},//tile
+  chance = new String[] {"Chance","Chance"},//tile
+  goJail = new String[] {"Go to jail","Gå i fængsel"},//tile
+  ice = new String[] {"Ice cream parlour", "Iskiosken"},//tile
+  library = new String[] {"Library","bibliotek"}, //tile
+  movie = new String[] {"Movie theatre", "Biografen"},//tile
+  museum = new String[] {"Museum","Museet"},//tile
+  park = new String[] {"Park place", "Swimmingpoolen"},//tile
+  parking = new String[] {"Free parking", "Gratis parkering"},//tile
+  pet = new String[] {"Pet store","Dyrehandel"},//tile
+  pizza = new String[] {"Pizza house","Pizzeriaet"},//tile
+  skate = new String[] {"Skate park", "Skaterparken"},
+  start = new String[] {"Start", "Start"},
+  swim = new String[] {"Swimming pool","Vandlandet"},
+  toy = new String[] {"Toy store","Legetøjsbutikken"},
+  visitJail = new String[] {"Visiting in jail","På besøg i fængsel"},
+  zoo = new String[] {"The zoo","Zoo"},
 
   public static String getSring(int ID){
     switch (ID) {
