@@ -5,6 +5,7 @@ import CDIO3.deck.specificCards.*;
 public class Deck {
     private Card[] deck = new Card[20];
     int k = 0;
+    public Integer length;
 
     public Deck() {
         deck = new Card[]{
@@ -37,5 +38,9 @@ public class Deck {
                 deck[j] = temp;
             }
         }
+    }
+
+    public Object length() {
+        return deck.length;
     }
 }
