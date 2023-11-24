@@ -2,6 +2,7 @@ package CDIO3.TUI;
 
 import CDIO3.Tiles.Tile;
 import CDIO3.Tiles.differentCards.TestTile;
+import CDIO3.lang.Lang;
 
 public class CornerPiece implements BoardPiece {
   public String[] pieceLines;
@@ -48,14 +49,14 @@ public class CornerPiece implements BoardPiece {
     return lines;
   }
   public String getLine(int lineID){
-    if(lineID < 0 || lineID >= pieceLines.length) return "missing line"; 
+    if(lineID < 0 || lineID >= pieceLines.length) return Lang.getSring(30); 
     return pieceLines[lineID];
   }
   @Override
   public void inspect() {
-    System.out.println("tile name: " + tile.getName());
-    System.out.println("tile nr: " + tile.getNumber());
-    // System.out.println("players on this tile: " + App.playerPossitionList()[tile.getNumber()]);
+    System.out.println(Lang.getSring(31) + tile.getName());
+    System.out.println(Lang.getSring(32) + tile.getNumber());
+    // TODOSystem.out.println("players on this tile: " + App.playerPossitionList()[tile.getNumber()]);
   }
   @Override
   public int getTileNR() {

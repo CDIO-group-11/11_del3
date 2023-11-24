@@ -1,11 +1,12 @@
 package CDIO3.TUI;
 
+import CDIO3.App;
 import CDIO3.Tiles.Board;
 import CDIO3.Tiles.Tile;
+import CDIO3.lang.Lang;
 
 public class BoardPrinter {
   private BoardPiece[] boardPieces;
-  private String[] owners = new String[24];
   public BoardPrinter(Board board){
     BoardPiece[] tempPieces = new BoardPiece[24];
     for (int i = 0; i < 24; i++) {
@@ -62,12 +63,6 @@ public class BoardPrinter {
     }
     return out;
   }
-  public void setOwner(int tileID, String owner){
-    owners[tileID] = owner;
-  }
-  public void setOwner(Tile tile, String owner){
-    owners[tile.getNumber()-1] = owner;
-  }
   private String setOwner(String board, String[] owners){
     for (int i = 0; i < owners.length; i++) {
       board = board.replace(new String(Character.toChars(0xE000 + i)), (owners[i] != null ? owners[i] : " "));
@@ -75,17 +70,22 @@ public class BoardPrinter {
     return board;
   }
   public void print(){
-    System.out.println(setOwner(BoardAssembler(),owners));
+    System.out.println(setOwner(BoardAssembler(),App.getOwnerList()));
   }
   public void inspect(int tile) {
-    boardPieces[tile].inspect();
+    int[] locations = {0,1,2,3,4,5,6,23,7,22,8,21,9,20,10,19,11,18,17,16,15,14,13,12};
+    for (int i = 0; i < locations.length; i++) {
+      if(tile == locations[i]){
+        boardPieces[i].inspect();
+      }
+    }
   }
   public static void guide() {
     System.out.print(
       "┌──────────────┐\n"+
-      "│████color█████│\n"+
+      Lang.getSring(22) + "\n"+
       "├─────┬────────┤\n"+
-      "│owner│#tile nr│\n"
+      Lang.getSring(23) + "\n"
     );
   }
   public int[] getOrder() {
@@ -94,7 +94,6 @@ public class BoardPrinter {
     for (int i = 0; i < out.length; i++) {
       out[i] = boardPieces[i].getTileNR();
     }
-
     return out;
   }
 }

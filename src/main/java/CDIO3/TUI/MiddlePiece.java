@@ -2,6 +2,7 @@
 package CDIO3.TUI;
 import CDIO3.Tiles.Tile;
 import CDIO3.Tiles.differentCards.TestTile;
+import CDIO3.lang.Lang;
 public class MiddlePiece implements BoardPiece{
   public String[] pieceLines;
   private Tile tile;
@@ -53,9 +54,9 @@ public class MiddlePiece implements BoardPiece{
   }
   @Override
   public void inspect() {
-    System.out.println("tile name: " + tile.getName());
-    System.out.println("tile nr: " + tile.getNumber());
-    System.out.println("tile color: " + tile.getColor().name());
+    System.out.println(Lang.getSring(31) + tile.getName());
+    System.out.println(Lang.getSring(32) + tile.getNumber());
+    System.out.println(Lang.getSring(33) + tile.getColor().name());
     // System.out.println("players on this tile: " + App.playerPossitionList()[tile.getNumber()]);
   }
   @Override
