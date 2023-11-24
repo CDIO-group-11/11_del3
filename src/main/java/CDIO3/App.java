@@ -6,6 +6,7 @@ import CDIO3.TUI.TUI_Manager;
 import CDIO3.TUI.UserInput;
 import CDIO3.Tiles.Board;
 import CDIO3.Tiles.Tile;
+import CDIO3.lang.Lang;
 
 /**
  * Hello world!
@@ -18,7 +19,7 @@ public class App {
   private static Board table;
   private static int currentPlayer = 0, previusPlayer = -1;
   public static void main( String[] args ){
-    int playerCount = UserInput.getInt("how many players will be in the game? ",2,4);
+    int playerCount = UserInput.getInt(Lang.getSring(0),2,4);
     players = new Player[playerCount];
     Player.PlayerAmount = playerCount;
     for (int i = 0; i < playerCount ; i++) {
