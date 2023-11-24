@@ -89,7 +89,7 @@ public class App {
   private static void setPlayerCount(String arg) {
     try {
       Player.PlayerAmount = Integer.parseInt(arg.split("=") [1]);
-    } catch (NumberFormatException e) {
+    } catch (NumberFormatException | IndexOutOfBoundsException e) {
       throw new IllegalArgumentException("could not resolve the playercount from the argument: " + arg + "\n\texpected number format: " + "playerCount=3");
     }
   }
