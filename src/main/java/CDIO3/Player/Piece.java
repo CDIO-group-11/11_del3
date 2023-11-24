@@ -20,6 +20,10 @@ public class Piece {
         piece %= 25;
     }
 
+    public void setPosition(int newPosition) {
+        this.piece = newPosition;
+    }
+
     public int getPosition() {
         return piece;
     }
