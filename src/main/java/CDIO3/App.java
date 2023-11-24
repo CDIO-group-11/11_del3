@@ -74,7 +74,7 @@ public class App {
           playerSet = true;
           break;
         default:
-          break;
+          throw new IllegalArgumentException("unknown argument found at: " + i + " (" + args[i] + ")");
       }
     }
     if(!playerSet){
