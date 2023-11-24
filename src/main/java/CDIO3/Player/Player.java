@@ -3,8 +3,7 @@ package CDIO3.Player;
 public class Player {
     public static int PlayerAmount;
     Wallet wallet = new Wallet();
-    Piece piece;
-    String propertyDeeds;
+    Piece piece = new Piece(0);
     int[] tilesowned = new int[24];
     int nrOfTilesOwned = 0;
     
@@ -24,8 +23,5 @@ public class Player {
     public void setOwnedBy(int newtilesownednr) {
         tilesowned[nrOfTilesOwned] = newtilesownednr;
         nrOfTilesOwned++;
-    }
-    public int getNrOfTilesOwned() {
-        return nrOfTilesOwned;
     }
 }
