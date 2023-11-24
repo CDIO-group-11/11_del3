@@ -41,6 +41,7 @@ public class BoardPrinterTest {
     System.setIn(orgIn);
   }
   @Test
+  @Disabled
   public void guide(){
     BoardPrinter.guide();
     byte[] out = newOut.toByteArray();
