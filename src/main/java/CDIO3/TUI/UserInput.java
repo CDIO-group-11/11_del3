@@ -3,6 +3,7 @@ package CDIO3.TUI;
 import java.util.Scanner;
 
 import CDIO3.Tiles.Color;
+import CDIO3.lang.Lang;
 
 public class UserInput {
   private static Scanner scan = new Scanner(System.in);
@@ -12,12 +13,12 @@ public class UserInput {
       int in = getInt(message);
       if(in > max) {
         CommandTUI.clearAll();
-        System.out.println("number may not be above: " + max);
+        System.out.println(Lang.getSring(51) + max);
         continue;
       }
       if(in < min) {
         CommandTUI.clearAll();
-        System.out.println("number may not be below: " + min);
+        System.out.println(Lang.getSring(52) + min);
         continue;
       }
       return in;
@@ -32,7 +33,7 @@ public class UserInput {
         return Integer.parseInt(in);
       }catch(NumberFormatException ignore){
         CommandTUI.clearAll();
-        System.out.println("only whole numbers accepted (as numerals)");
+        System.out.println(Lang.getSring(53));
       }
     }
   }
@@ -47,7 +48,7 @@ public class UserInput {
         }
       }
       CommandTUI.clearAll();
-      System.out.println("only these colors are accepted:");
+      System.out.println(Lang.getSring(54));
       for (int i = 0; i < Color.values().length; i++) {
         System.out.println("\t" + Color.values()[i].name());
       }
@@ -83,7 +84,7 @@ public class UserInput {
         }
       }
       CommandTUI.clearAll();
-      System.out.println("only these commands are accepted:");
+      System.out.println(Lang.getSring(55));
       for (int i = 0; i < commands.length; i++) {
         System.out.print("\t" + commands[i]);
         if(i < actions.length && actions[i] != null){

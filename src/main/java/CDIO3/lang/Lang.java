@@ -52,7 +52,20 @@ public class Lang {
   },
   $ = new String[] {"\tand has ","DK"},
   rolled = new String[] {"has just rolled a: ", "DK"},
-
+  onTile = new String[] {"and is now on tile ", "DK"},
+  call = new String[] {"called: ", "DK"},
+  current = new String[] {"current player: ", "DK"},
+  place = new String[] {"you are on tile ", "DK"},
+  spiller = new String[] {"player: ", "DK"},
+  names = new String[] {"\tname: ", "DK"},
+  unBought = new String[] {"\thas yet to purchase a property", "DK"},
+  bank = new String[] {"Bank owned", "DK"},
+  price = new String[] {"| price: ", "DK"},
+  above = new String[] {"number may not be above: ", "DK"},
+  below = new String[] {"number may not be below: ", "DK"},
+  numeral = new String[] {"only whole numbers accepted (as numerals)", "DK"},
+  colors = new String[] {"only these colors are accepted:", "DK"},
+  commands = new String[] {"only these commands are accepted:", "DK"},
 
   public static String getSring(int ID){
     switch (ID) {
@@ -141,15 +154,41 @@ public class Lang {
       case 41:
         return rolled[lang.ordinal()];
       case 42:
-        return rolled[lang.ordinal()];
+        return onTile[lang.ordinal()];
       case 43:
-        return rolled[lang.ordinal()];
+        return call[lang.ordinal()];
       case 44:
-        return rolled[lang.ordinal()];
+        return current[lang.ordinal()];
       case 45:
-        return rolled[lang.ordinal()];
+        return place[lang.ordinal()];
       case 46:
-        return rolled[lang.ordinal()];
+        return spiller[lang.ordinal()];
+      case 47:
+        return names[lang.ordinal()];
+      case 48:
+        return unBought[lang.ordinal()];
+      case 49:
+        return bank[lang.ordinal()];
+      case 50:
+        return price[lang.ordinal()];
+      case 51:
+        return above[lang.ordinal()];
+      case 52:
+        return below[lang.ordinal()];
+      case 53:
+        return numeral[lang.ordinal()];
+      case 54:
+        return colors[lang.ordinal()];
+      case 55:
+        return commands[lang.ordinal()];
+      case 56:
+        return price[lang.ordinal()];
+      case 57:
+        return price[lang.ordinal()];
+      case 58:
+        return price[lang.ordinal()];
+      case 59:
+        return price[lang.ordinal()];
       default:
         return null;
     }

@@ -57,15 +57,15 @@ public class TUI_Manager {
     System.out.println();
     
     if(die1 != -1){
-      System.out.println((previusPlayer + 1) + "has just rolled a: " + die1);
-      System.out.println("and is now on tile " + (players[previusPlayer].getPiece().getPosition() + 1));
-      System.out.println("called: " + table.getTile(players[previusPlayer].getPiece().getPosition()).getName());
+      System.out.println((previusPlayer + 1) + Lang.getSring(41) + die1);
+      System.out.println(Lang.getSring(42) + (players[previusPlayer].getPiece().getPosition() + 1));
+      System.out.println(Lang.getSring(43) + table.getTile(players[previusPlayer].getPiece().getPosition()).getName());
     }
     System.out.println();
     
-    System.out.println("current player: " + currentPlayer);
-    System.out.println("you are on tile " + (players[currentPlayer].getPiece().getPosition() + 1));
-    System.out.println("called: " + table.getTile(players[currentPlayer].getPiece().getPosition()).getName());
+    System.out.println(Lang.getSring(44) + currentPlayer);
+    System.out.println(Lang.getSring(45) + (players[currentPlayer].getPiece().getPosition() + 1));
+    System.out.println(Lang.getSring(43) + table.getTile(players[currentPlayer].getPiece().getPosition()).getName());
     System.out.println();
     
     print.print();
@@ -74,24 +74,24 @@ public class TUI_Manager {
   public void ownerList(Player[] players, Board table){
     boolean[] own = new boolean[24];
     for (int i = 0; i < players.length; i++) {
-      System.out.println("player: "  + (i + 1));
+      System.out.println(Lang.getSring(46) + (i + 1));
       if(players[i].getNrOfTilesOwned() > 0){
         int[] owned = players[i].getTilesOwned();
         for (int j = 0; j < players[i].getNrOfTilesOwned(); j++) {
-          System.out.println("\tname: " + table.getTile(owned[i]).getName());
+          System.out.println(Lang.getSring(47) + table.getTile(owned[i]).getName());
           own[owned[i]] = true;
         }
       }else{
-        System.out.println("\thas yet to purchase a property");
+        System.out.println(Lang.getSring(48));
       }
     }
-    System.out.println("Bank owned");
+    System.out.println(Lang.getSring(49));
     for (int i = 0; i < own.length; i++) {
       if(!own[i]){
         if(table.getTile(i).getPrice() > 0){
-          System.out.print("\tname: " + table.getTile(i).getName());
+          System.out.print(Lang.getSring(47) + table.getTile(i).getName());
           CommandTUI.skipTo(35);
-          System.out.println("| price: " + table.getTile(i).getPrice());
+          System.out.println(Lang.getSring(50) + table.getTile(i).getPrice());
         }
       }
     }
