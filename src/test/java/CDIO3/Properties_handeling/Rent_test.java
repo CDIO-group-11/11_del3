@@ -15,17 +15,17 @@ public class Rent_test {
     private static Player[] players;
     private static Board table;
     @Test
-    public void Rent_test(){
+    public void Renttest(){
         players = new Player[2];
         for (int i = 0; i < 2 ; i++) {
           players[i] = new Player();
         }
 
         table = new Board();
-        Tile tile = table.getTile(1);
+        Tile tile = table.getTile(7);
         Tile tile2 = table.getTile(8);
 
-        assertTrue(tile.getPrice() == 1);
+        assertTrue(tile.getPrice() == 2);
         assertTrue(tile2.getPrice() == 2);
 
         Buy.buytial(tile,players[0],0);        
@@ -39,9 +39,9 @@ public class Rent_test {
 
         assertTrue(players[1].getWallet().get$() == 20);
         assertTrue(payRent.pay_Rent(tile, players, 1, table));
-        assertTrue(players[1].getWallet().get$() == 18);
-        assertTrue(payRent.pay_Rent(tile, players, 1, table));
         assertTrue(players[1].getWallet().get$() == 16);
+        assertTrue(payRent.pay_Rent(tile, players, 1, table));
+        assertTrue(players[1].getWallet().get$() == 12);
     }
 
 }
