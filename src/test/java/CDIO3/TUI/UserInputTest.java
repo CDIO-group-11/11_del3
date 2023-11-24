@@ -44,12 +44,14 @@ public class UserInputTest {
   @Order(1)
   @Test
   public void testOutPrintStream(){
+    newOut.reset();
     System.out.print("output");
     assertEquals(new String("output".getBytes()),new String(newOut.toByteArray()));
   }
   @Order(2)
   @Test
   public void testErrPrintStream(){
+    newErr.reset();
     System.err.print("output");
     assertEquals(new String("output".getBytes()),new String(newErr.toByteArray()));
   }
@@ -65,7 +67,7 @@ public class UserInputTest {
   public void testUserInputCommand(){
     int rand = (int) (Math.random() * Commands.values().length);
     Input(Commands.values()[rand].name());
-    Commands command = UserInput.getCommand(new String[0], "commands");
+    Commands command = UserInput.getCommand("commands");
     assertEquals(Commands.values()[rand].name(), command.name());
   }
 
