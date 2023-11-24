@@ -4,8 +4,9 @@ import CDIO3.Player.Player;
 
 public class Movementcard {
 
-    public static void move(Player player, Card card) {
-        player.getPiece().move(card.getMOVEMENT_VALUE());
+    public void move(Player player, Card card) {
+        if(card.getMOVEMENT_VALUE() != 0) {
+            player.getPiece().move(card.getMOVEMENT_VALUE());
 
         }
         else {
