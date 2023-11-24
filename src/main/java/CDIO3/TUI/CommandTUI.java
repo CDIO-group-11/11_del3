@@ -14,6 +14,9 @@ public class CommandTUI {
   public static void skip(int distance){
     System.out.print("\033[" + distance + "C");
   }
+  public static void skipTo(int point){
+    System.out.print("\033[" + point + "G");
+  }
   public static void setPoint(int vertical, int horizontal){
     String out = "\033[";
     out += horizontal > 0 ? horizontal : 1;
