@@ -10,5 +10,9 @@ public class Pizza extends Tile{
     public Pizza(int tileNR) {
         super(Color.brown, Lang.getSring(15), tileNR, 1, -1);
     }
-    
+    @Override
+    public void landOn() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+    }
 }

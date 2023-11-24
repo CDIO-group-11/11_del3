@@ -9,7 +9,7 @@ import CDIO3.Tiles.Tile;
 import CDIO3.PropertiesHandeling.Buy;
 
 
-public class Buy_test {
+public class BuyTest {
     private static Board table;
     @Test
     public void Buy_test(){
