@@ -23,12 +23,25 @@ public class Rent_test {
 
         table = new Board();
         Tile tile = table.getTile(1);
-        Tile tile2 = table.getTile(2);
+        Tile tile2 = table.getTile(8);
 
-        Buy.buytial(tile,players[0],1);
+        assertTrue(tile.getPrice() == 1);
+        assertTrue(tile2.getPrice() == 2);
 
-        assertTrue(payRent.pay_Rent(tile, players, 1));
-        assertFalse(payRent.pay_Rent(tile2, players, 1));
+        Buy.buytial(tile,players[0],0);        
+        Buy.buytial(tile2,players[0],0);
+
+        assertTrue(tile.getName() == "Burger joint");
+        assertTrue(tile2.getName() == "Library");
+
+        assertTrue(tile.getOwnedBy() == 0);
+        assertTrue(tile2.getOwnedBy() == 0);
+
+        assertTrue(players[1].getWallet().get$() == 20);
+        assertTrue(payRent.pay_Rent(tile, players, 1, table));
+        assertTrue(players[1].getWallet().get$() == 18);
+        assertTrue(payRent.pay_Rent(tile, players, 1, table));
+        assertTrue(players[1].getWallet().get$() == 16);
     }
 
 }
