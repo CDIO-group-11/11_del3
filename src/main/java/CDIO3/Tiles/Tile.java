@@ -1,5 +1,7 @@
 package CDIO3.Tiles;
 
+import CDIO3.Player.Player;
+
 public abstract class Tile {
   protected Color color;
   protected String name;
@@ -33,6 +35,6 @@ public abstract class Tile {
   public void setOwnedBy(int newOwner) {
     this.ownedBy = newOwner;
   }
-  abstract public void landOn();
+  abstract public void landOn(Player[] players, int currentplayer, Board table);
 }
 
