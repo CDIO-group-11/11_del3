@@ -16,7 +16,7 @@ public class TestTile extends Tile {
   }
   @Override
   public void landOn() {
-      // TODO Auto-generated method stub
-      throw new UnsupportedOperationException("Unimplemented method 'landOn'");
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'landOn'");
   }
 }
