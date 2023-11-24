@@ -3,11 +3,12 @@ package CDIO3.Tiles.differentCards;
 
 import CDIO3.Tiles.Color;
 import CDIO3.Tiles.Tile;
+import CDIO3.lang.Lang;
 
 public class Ice extends Tile{
 
     public Ice(int tileNR) {
-        super(Color.light_blue, "Ice cream parlour", tileNR, 1, -1);
+        super(Color.light_blue, Lang.getSring(8), tileNR, 1, -1);
     }
 
     @Override
