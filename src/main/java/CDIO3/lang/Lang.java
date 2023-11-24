@@ -65,7 +65,7 @@ public class Lang {
   below = new String[] {"number may not be below: ", "DK"},
   numeral = new String[] {"only whole numbers accepted (as numerals)", "DK"},
   colors = new String[] {"only these colors are accepted:", "DK"},
-  commands = new String[] {"only these commands are accepted:", "DK"},
+  commands = new String[] {"only these commands are accepted:", "DK"};
 
   public static String getSring(int ID){
     switch (ID) {
