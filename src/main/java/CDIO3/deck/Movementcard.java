@@ -4,7 +4,7 @@ import CDIO3.Player.Player;
 
 public class Movementcard {
 
-    public void move(Player player, Card card) {
+    public static void move(Player player, Card card) {
         player.getPiece().move(card.getMOVEMENT_VALUE());
     }
 }

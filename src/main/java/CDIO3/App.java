@@ -30,7 +30,7 @@ public class App {
       die0 = cup.getSides()[0];
       players[currentPlayer].getPiece().move(die0);
       Tile land = table.getTile(players[currentPlayer].getPiece().getPosition());
-      land.landOn();
+      land.landOn(players, currentPlayer, table);
       previusPlayer = currentPlayer;
       currentPlayer++;
       currentPlayer %= Player.PlayerAmount;
