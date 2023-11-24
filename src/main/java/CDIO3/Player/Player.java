@@ -4,28 +4,27 @@ public class Player {
     public static int PlayerAmount;
     Wallet wallet = new Wallet();
     Piece piece = new Piece(0);
-    String propertyDeeds;
     int[] tilesowned = new int[24];
     int nrOfTilesOwned = 0;
     
-
-    public int getNrOfTilesOwned() {
-        return nrOfTilesOwned;
-    }
+    //Giver spillerens penge
     public Wallet getWallet() {
         return wallet;
     }
+    //Giver spillerens position på brættet
     public Piece getPiece() {
         return piece;
     }
-    public String getPropertyDeeds() {
-        return propertyDeeds;
-    }
+    //Giver de ejendomme spilleren ejer
     public int[] getTilesOwned() {
         return tilesowned;
     }
+    //Hjælper med at sætte en ejendom som eget af spilleren
     public void setOwnedBy(int newtilesownednr) {
         tilesowned[nrOfTilesOwned] = newtilesownednr;
         nrOfTilesOwned++;
+    }
+    public int getNrOfTilesOwned(){
+        return nrOfTilesOwned;
     }
 }

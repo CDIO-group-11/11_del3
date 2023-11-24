@@ -6,6 +6,7 @@ import CDIO3.TUI.TUI_Manager;
 import CDIO3.TUI.UserInput;
 import CDIO3.Tiles.Board;
 import CDIO3.Tiles.Tile;
+import CDIO3.lang.Lang;
 
 /**
  * Hello world!
@@ -14,18 +15,16 @@ import CDIO3.Tiles.Tile;
 public class App {
   private static Player[] players;
   private static RaffleCup cup = new RaffleCup(1,6);
-  private static TUI_Manager TUI;
-  private static Board table;
+  private static Board table = new Board(); ;
+  private static TUI_Manager TUI = new TUI_Manager(table);
   private static int currentPlayer = 0, previusPlayer = -1;
   public static void main( String[] args ){
-    int playerCount = UserInput.getInt("how many players will be in the game? ",2,4);
+    int playerCount = UserInput.getInt(Lang.getSring(0),2,4);
     players = new Player[playerCount];
     Player.PlayerAmount = playerCount;
     for (int i = 0; i < playerCount ; i++) {
       players[i] = new Player();
     }
-    table = new Board();
-    TUI = new TUI_Manager(table);
     int die0 = -1; 
     while (true) {
       TUI.readTurn(die0,currentPlayer, previusPlayer,players, table);

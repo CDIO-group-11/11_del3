@@ -3,6 +3,7 @@ package CDIO3.TUI;
 import CDIO3.App;
 import CDIO3.Tiles.Board;
 import CDIO3.Tiles.Tile;
+import CDIO3.lang.Lang;
 
 public class BoardPrinter {
   private BoardPiece[] boardPieces;
@@ -77,9 +78,9 @@ public class BoardPrinter {
   public static void guide() {
     System.out.print(
       "┌──────────────┐\n"+
-      "│████color█████│\n"+
+      Lang.getSring(22) + "\n"+
       "├─────┬────────┤\n"+
-      "│owner│#tile nr│\n"
+      Lang.getSring(23) + "\n"
     );
   }
   public int[] getOrder() {
