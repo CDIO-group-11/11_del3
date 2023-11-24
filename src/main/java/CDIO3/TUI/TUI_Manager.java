@@ -63,7 +63,7 @@ public class TUI_Manager {
     }
     System.out.println();
     
-    System.out.println(Lang.getSring(44) + currentPlayer);
+    System.out.println(Lang.getSring(44) + (currentPlayer + 1));
     System.out.println(Lang.getSring(45) + (players[currentPlayer].getPiece().getPosition() + 1));
     System.out.println(Lang.getSring(43) + table.getTile(players[currentPlayer].getPiece().getPosition()).getName());
     System.out.println();

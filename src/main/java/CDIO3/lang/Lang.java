@@ -52,7 +52,7 @@ public class Lang {
   },
 
   $ = new String[]           {"\tand has ","\tog har "},
-  rolled = new String[]      {"Has just rolled a: ", "har lige rullet: "},
+  rolled = new String[]      {" Has just rolled a: ", " har lige rullet: "},
   onTile = new String[]      {"and is now on tile ", "og er nu på felt "},
   call = new String[]        {"called: ", "kaldet: "},
   current = new String[]     {"Current player: ", "Nuværende spiller: "},

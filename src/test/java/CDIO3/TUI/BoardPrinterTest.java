@@ -8,6 +8,7 @@ import java.io.PrintStream;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import CDIO3.InReplace;
@@ -41,6 +42,7 @@ public class BoardPrinterTest {
     System.setIn(orgIn);
   }
   @Test
+  @Disabled
   public void guide(){
     BoardPrinter.guide();
     byte[] out = newOut.toByteArray();

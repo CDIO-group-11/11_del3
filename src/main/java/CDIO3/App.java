@@ -119,13 +119,13 @@ public class App {
         owners[i] = "@";
         break;
         case 1:
-        owners[i] = "£";
+        owners[i] = "%";
         break;
         case 2:
         owners[i] = "$";
         break;
         case 3:
-        owners[i] = "€";
+        owners[i] = "&";
         break;
       }
     }
