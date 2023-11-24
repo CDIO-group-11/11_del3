@@ -30,7 +30,7 @@ public class App {
       die0 = cup.getSides()[0];
       players[currentPlayer].getPiece().move(die0);
       Tile land = table.getTile(players[currentPlayer].getPiece().getPosition());
-      land.landOn();
+      land.landOn(players, currentPlayer, table);
       previusPlayer = currentPlayer;
       currentPlayer++;
       currentPlayer %= Player.PlayerAmount;
@@ -130,5 +130,19 @@ public class App {
       }
     }
     return owners;
+  }
+  public static void endGame(String reason){
+    System.out.println("the game has ended");
+    System.out.println(reason);
+    System.out.print("the winner is player ");
+    int win = 0;
+    for (int i = 1; i < players.length; i++) {
+      if(players[i].getWallet().get$() > players[win].getWallet().get$()){
+        win = i;
+      }
+    }
+    System.out.println((win+1));
+    System.out.println("who has: " + players[win].getWallet().get$());
+    System.exit(0);
   }
 }
