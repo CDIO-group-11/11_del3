@@ -1,5 +1,7 @@
 package CDIO3.lang;
 
+import CDIO3.Tiles.differentCards.Bowling;
+
 public class Lang {
   private static Language lang = Language.en;
   public static void setLang(Language lang){
@@ -8,7 +10,8 @@ public class Lang {
   private static String[]
   playerCount = new String[] {"how many players will be in the game? ","DK"},
   arcade = new String[] {"Video game arcade","DK"},//tile
-  beach = new String[] {"Beach","DK"};
+  beach = new String[] {"Beach","DK"},//tile
+  bowling = new String[] {"Bowling alley","DK"};//tile
 
   public static String getSring(int ID){
     switch (ID) {
@@ -19,7 +22,7 @@ public class Lang {
       case 2:
         return beach[lang.ordinal()];
       case 3:
-        return playerCount[lang.ordinal()];
+        return Bowling[lang.ordinal()];
       case 4:
         return playerCount[lang.ordinal()];
       case 5:
