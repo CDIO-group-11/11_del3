@@ -76,7 +76,7 @@ public class BoardPrinter {
     int[] locations = {0,1,2,3,4,5,6,23,7,22,8,21,9,20,10,19,11,18,17,16,15,14,13,12};
     for (int i = 0; i < locations.length; i++) {
       if(tile == locations[i]){
-        boardPieces[locations[i]].inspect();
+        boardPieces[i].inspect();
       }
     }
   }
