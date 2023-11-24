@@ -50,6 +50,7 @@ public class Lang {
     "Player 3 owns ", "Player 3 ejer ",
     "Player 4 owns ", "Player 4 ejer "
   },
+<<<<<<< HEAD
   $ = new String[] {"\tand has ","\tog har "},
   rolled = new String[] {"Has just rolled a: ", "har lige rullet: "},
   onTile = new String[] {"and is now on tile ", "og er nu på felt "},
@@ -66,6 +67,24 @@ public class Lang {
   numeral = new String[] {"Only whole numbers are accepted (as numerals)", "Kun heltal accepteres (Som numeraler)"},
   colors = new String[] {"Only these colors are accepted:", "Kun disse farve er accepteret:"},
   commands = new String[] {"Only these commands are accepted:", "Kun disse kommandoer accepteres:"},
+=======
+  $ = new String[] {"\tand has ","DK"},
+  rolled = new String[] {"has just rolled a: ", "DK"},
+  onTile = new String[] {"and is now on tile ", "DK"},
+  call = new String[] {"called: ", "DK"},
+  current = new String[] {"current player: ", "DK"},
+  place = new String[] {"you are on tile ", "DK"},
+  spiller = new String[] {"player: ", "DK"},
+  names = new String[] {"\tname: ", "DK"},
+  unBought = new String[] {"\thas yet to purchase a property", "DK"},
+  bank = new String[] {"Bank owned", "DK"},
+  price = new String[] {"| price: ", "DK"},
+  above = new String[] {"number may not be above: ", "DK"},
+  below = new String[] {"number may not be below: ", "DK"},
+  numeral = new String[] {"only whole numbers accepted (as numerals)", "DK"},
+  colors = new String[] {"only these colors are accepted:", "DK"},
+  commands = new String[] {"only these commands are accepted:", "DK"};
+>>>>>>> 48250e9a555aae584e0161aee2bee8ade4ef167b
 
   public static String getSring(int ID){
     switch (ID) {
