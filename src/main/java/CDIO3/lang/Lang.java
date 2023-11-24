@@ -28,7 +28,7 @@ public class Lang {
   bowling = new String[]     {"Bowling alley","Bowlinghallen"},
   zoo = new String[]         {"The zoo","Zoo"},
   park = new String[]        {"Park place", "Swimmingpoolen"},//tile
-  beach = new String[]       {"Beach","Strandpromenaden"},
+  beach = new String[]       {"Boardwalk","Strandpromenaden"},
   chance = new String[]      {"Chance","Chance"},//tile
   descriptCol = new String[] {"│████color█████│" ,"│████Farve█████│"},//length is constant
   descriptOwn = new String[] {"│owner│#tile nr│" ,"│Ejer │#Felt nr│"},//length is constant
