@@ -11,7 +11,7 @@ import CDIO3.PropertiesHandeling.Buy;
 import CDIO3.PropertiesHandeling.payRent;
 
 
-public class Rent_test {
+public class RentTest {
     private static Player[] players;
     private static Board table;
     @Test
@@ -28,20 +28,27 @@ public class Rent_test {
         assertTrue(tile.getPrice() == 2);
         assertTrue(tile2.getPrice() == 2);
 
-        Buy.buytial(tile,players[0],0);        
-        Buy.buytial(tile2,players[0],0);
+        Buy.buytial(tile,players[0],0);
+        
+        assertTrue(players[1].getWallet().get$() == 20);
+        assertTrue(payRent.pay_Rent(tile, players, 1, table));
+        assertTrue(players[1].getWallet().get$() == 18);        
+        
+        assertTrue(payRent.pay_Rent(tile, players, 1, table));
+        assertTrue(players[1].getWallet().get$() == 16);  
+        
+        assertTrue(Buy.buytial(tile2,players[0],0));
 
-        assertTrue(tile.getName() == "Burger joint");
+        assertTrue(tile.getName() == "Museum");
         assertTrue(tile2.getName() == "Library");
 
         assertTrue(tile.getOwnedBy() == 0);
         assertTrue(tile2.getOwnedBy() == 0);
 
-        assertTrue(players[1].getWallet().get$() == 20);
-        assertTrue(payRent.pay_Rent(tile, players, 1, table));
-        assertTrue(players[1].getWallet().get$() == 16);
         assertTrue(payRent.pay_Rent(tile, players, 1, table));
         assertTrue(players[1].getWallet().get$() == 12);
+        assertTrue(payRent.pay_Rent(tile, players, 1, table));
+        assertTrue(players[1].getWallet().get$() == 8);
     }
 
 }
