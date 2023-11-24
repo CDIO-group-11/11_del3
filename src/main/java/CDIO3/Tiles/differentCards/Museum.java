@@ -3,11 +3,12 @@ package CDIO3.Tiles.differentCards;
 
 import CDIO3.Tiles.Color;
 import CDIO3.Tiles.Tile;
+import CDIO3.lang.Lang;
 
 public class Museum extends Tile{
 
     public Museum(int tileNR) {
-        super(Color.brown, "Museum", tileNR, 2, -1);
+        super(Color.brown, Lang.getSring(11), tileNR, 2, -1);
     }
     @Override
     public void landOn() {
