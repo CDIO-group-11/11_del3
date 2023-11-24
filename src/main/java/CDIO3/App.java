@@ -64,6 +64,7 @@ public class App {
           if(cleanSet) throw new IllegalArgumentException("only one color argument allowed\n\t one found at: " + i + " (" + args[i] + ")");
           color(args[i]);
           cleanSet = true;
+          break;
         case "playerCount":
         case "-p":
         case "playCount":
@@ -71,6 +72,7 @@ public class App {
           if(playerSet) throw new IllegalArgumentException("only one playerCount argument allowed\n\t one found at: " + i + " (" + args[i] + ")");
           setPlayerCount(args[i]);
           playerSet = true;
+          break;
         default:
           break;
       }
