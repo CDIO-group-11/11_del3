@@ -131,7 +131,7 @@ public class App {
     }
     return owners;
   }
-  public void endGame(String reason){
+  public static void endGame(String reason){
     System.out.println("the game has ended");
     System.out.println(reason);
     System.out.print("the winner is player ");
