@@ -9,7 +9,7 @@ public class BoardTest {
   @Test
   public void correctTilesEng(){
     String[] correct = new String[]{
-      "Start",
+      "Go",
       "Burger joint",
       "Pizza house",
       "Chance",
@@ -31,8 +31,8 @@ public class BoardTest {
       "Bowling alley",
       "The zoo",
       "Chance",
-      "Water park",
-      "Beach promenade"
+      "Park place",
+      "Boardwalk"
     };
     String[] t = new String[24];
     for (int i = 0; i < t.length; i++) {

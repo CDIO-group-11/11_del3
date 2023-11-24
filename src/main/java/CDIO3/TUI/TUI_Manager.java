@@ -2,6 +2,7 @@ package CDIO3.TUI;
 
 import CDIO3.Player.Player;
 import CDIO3.Tiles.Board;
+import CDIO3.lang.Lang;
 
 public class TUI_Manager {
   private BoardPrinter print;
@@ -15,7 +16,7 @@ public class TUI_Manager {
   public void readTurn(int die1, int currentPlayer, int previusPlayer, Player[] players, Board board){
     detailPrint(die1, currentPlayer, previusPlayer, players, board);
     while (true) {
-      Commands command = UserInput.getCommand("please choose an action");
+      Commands command = UserInput.getCommand(Lang.getSring(34));
       switch (command) {
         case detail:
           detailPrint(die1,currentPlayer, previusPlayer, players, board);
@@ -23,7 +24,7 @@ public class TUI_Manager {
         case roll:
           return;
         case inspect:
-          print.inspect(UserInput.getInt("which piece do you wish to inspect: ",1,24)-1);
+          print.inspect(UserInput.getInt(Lang.getSring(35),1,24)-1);
           break;
         case guide:
           BoardPrinter.guide();
@@ -40,18 +41,18 @@ public class TUI_Manager {
 
   public void detailPrint(int die1, int currentPlayer, int previusPlayer, Player[] players, Board table){
     CommandTUI.clearAll();
-    System.out.println("Player 1 owns " + players[0].getNrOfTilesOwned());
-    System.out.println("\tand has " + players[0].getWallet().get$() + " M\n");
+    System.out.println(Lang.getSring(36) + players[0].getNrOfTilesOwned());
+    System.out.println(Lang.getSring(40) + players[0].getWallet().get$() + " M\n");
     
-    System.out.println("Player 2 owns " + players[1].getNrOfTilesOwned());
-    System.out.println("\tand has " + players[1].getWallet().get$() + " M\n");
+    System.out.println(Lang.getSring(37) + players[1].getNrOfTilesOwned());
+    System.out.println(Lang.getSring(40) + players[1].getWallet().get$() + " M\n");
     if(players.length > 2){
-      System.out.println("Player 3 owns " + players[2].getNrOfTilesOwned());
-      System.out.println("\tand has " + players[2].getWallet().get$() + " M\n");
+      System.out.println(Lang.getSring(38) + players[2].getNrOfTilesOwned());
+      System.out.println(Lang.getSring(40) + players[2].getWallet().get$() + " M\n");
     }
     if(players.length > 3){
-      System.out.println("Player 4 owns " + players[3].getNrOfTilesOwned());
-      System.out.println("\tand has " + players[3].getWallet().get$() + " M\n");
+      System.out.println(Lang.getSring(39) + players[3].getNrOfTilesOwned());
+      System.out.println(Lang.getSring(40) + players[3].getWallet().get$() + " M\n");
     }
     System.out.println();
     

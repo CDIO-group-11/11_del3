@@ -25,4 +25,7 @@ public class Player {
         tilesowned[nrOfTilesOwned] = newtilesownednr;
         nrOfTilesOwned++;
     }
+    public int getNrOfTilesOwned() {
+        return nrOfTilesOwned;
+    }
 }

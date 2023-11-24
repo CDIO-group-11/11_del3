@@ -42,6 +42,17 @@ public class Lang {
   name = new String[] {"tile name: ","Navn på felt: "},
   nr = new String[] {"tile nr: ", "Felt nr: "},
   color = new String[] {"tile color: ", "Felt farve: "},
+  action = new String[] {"please choose an action", "DK"},
+  inpectP = new String[] {"which piece do you wish to inspect: ", "DK"},
+  owns = new String[] {
+    "Player 1 owns ", "DK",
+    "Player 2 owns ", "DK",
+    "Player 3 owns ", "DK",
+    "Player 4 owns ", "DK"
+  },
+  $ = new String[] {"\tand has ","DK"},
+  rolled = new String[] {"has just rolled a: ", "DK"},
+
 
   public static String getSring(int ID){
     switch (ID) {
@@ -114,12 +125,32 @@ public class Lang {
       case 33:
         return color[lang.ordinal()];
       case 34:
-        return null[lang.ordinal()];
+        return action[lang.ordinal()];
       case 35:
-        return null[lang.ordinal()];
+        return inpectP[lang.ordinal()];
       case 36:
-        return null[lang.ordinal()];
-        default:
+        return owns[lang.ordinal()];
+      case 37:
+        return owns[lang.ordinal()+2];
+      case 38:
+        return owns[lang.ordinal()+4];
+      case 39:
+        return owns[lang.ordinal()+6];
+      case 40:
+        return $[lang.ordinal()];
+      case 41:
+        return rolled[lang.ordinal()];
+      case 42:
+        return rolled[lang.ordinal()];
+      case 43:
+        return rolled[lang.ordinal()];
+      case 44:
+        return rolled[lang.ordinal()];
+      case 45:
+        return rolled[lang.ordinal()];
+      case 46:
+        return rolled[lang.ordinal()];
+      default:
         return null;
     }
   }
