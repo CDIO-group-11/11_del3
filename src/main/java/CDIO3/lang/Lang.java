@@ -9,64 +9,64 @@ public class Lang {
 
 
   playerCount = new String[] {"how many players will be in the game? ","Hvor mange spillere spiller med? "},
-  arcade = new String[] {"Video game arcade","Spillehallen"},//tile
-  beach = new String[] {"Beach","Strandpromenaden"},
-  bowling = new String[] {"Bowling alley","Bowlinghallen"},
-  burger = new String[] {"Burger joint","Burgerbaren"}, //tile
-  candy = new String[] {"Candy store","Slikbutikken"},//tile
-  chance = new String[] {"Chance","Chance"},//tile
-  goJail = new String[] {"Go to jail","Gå i fængsel"},//tile
-  ice = new String[] {"Ice cream parlour", "Iskiosken"},//tile
-  library = new String[] {"Library","bibliotek"}, //tile
-  movie = new String[] {"Movie theatre", "Biografen"},//tile
-  museum = new String[] {"Museum","Museet"},//tile
-  park = new String[] {"Park place", "Swimmingpoolen"},//tile
-  parking = new String[] {"Free parking", "Gratis parkering"},//tile
-  pet = new String[] {"Pet store","Dyrehandel"},//tile
-  pizza = new String[] {"Pizza house","Pizzeriaet"},//tile
-  skate = new String[] {"Skate park", "Skaterparken"},
-  start = new String[] {"Start", "Start"},
-  swim = new String[] {"Swimming pool","Vandlandet"},
-  toy = new String[] {"Toy store","Legetøjsbutikken"},
-  visitJail = new String[] {"Visiting in jail","På besøg i fængsel"},
-  zoo = new String[] {"The zoo","Zoo"},
+  start = new String[]       {"Go", "Start"},
+  burger = new String[]      {"Burger joint","Burgerbaren"}, //tile
+  pizza = new String[]       {"Pizza house","Pizzeriaet"},//tile
+  candy = new String[]       {"Candy store","Slikbutikken"},//tile
+  ice = new String[]         {"Ice cream parlour", "Iskiosken"},//tile
+  visitJail = new String[]   {"Visiting in jail","På besøg i fængsel"},
+  museum = new String[]      {"Museum","Museet"},//tile
+  library = new String[]     {"Library","bibliotek"}, //tile
+  skate = new String[]       {"Skate park", "Skaterparken"},
+  swim = new String[]        {"Swimming pool","Vandlandet"},
+  parking = new String[]     {"Free parking", "Gratis parkering"},//tile
+  arcade = new String[]      {"Video game arcade","Spillehallen"},//tile
+  movie = new String[]       {"Movie theatre", "Biografen"},//tile
+  toy = new String[]         {"Toy store","Legetøjsbutikken"},
+  pet = new String[]         {"Pet store","Dyrehandel"},//tile
+  goJail = new String[]      {"Go to jail","Gå i fængsel"},//tile
+  bowling = new String[]     {"Bowling alley","Bowlinghallen"},
+  zoo = new String[]         {"The zoo","Zoo"},
+  park = new String[]        {"Park place", "Swimmingpoolen"},//tile
+  beach = new String[]       {"Beach","Strandpromenaden"},
+  chance = new String[]      {"Chance","Chance"},//tile
   descriptCol = new String[] {"│████color█████│" ,"│████Farve█████│"},//length is constant
   descriptOwn = new String[] {"│owner│#tile nr│" ,"│Ejer │#Felt nr│"},//length is constant
-  detail = new String[] {"See information about all players","Se information omkring alle spillere"},
-  roll = new String[] {"Roll for this turn","Rul for denne tur"},
-  inspect = new String[] {"Take a closer look at a tile","Tag et næmmere kig på et felt"},
-  guide = new String[] {"Learn how to read a tile","Lær at læse informationen på et felt"},
-  board = new String[] {"See the entire board","Se brættet"},
-  ownerList = new String[] {"See what tiles all players own","Se alle spilleres felter"},
-  line = new String[] {"Missing line","Mangler linje"},
-  name = new String[] {"Tile name: ","Navn på felt: "},
-  nr = new String[] {"Tile nr: ", "Felt nr: "},
-  color = new String[] {"Tile color: ", "Felt farve: "},
-  action = new String[] {"Please choose an action", "Vælg en handling"},
-  inpectP = new String[] {"Which tile do you wish to inspect: ", "Hvilket felt ønsker du inspektere"},
+  detail = new String[]      {"See information about all players","Se information omkring alle spillere"},
+  roll = new String[]        {"Roll for this turn","Rul for denne tur"},
+  inspect = new String[]     {"Take a closer look at a tile","Tag et næmmere kig på et felt"},
+  guide = new String[]       {"Learn how to read a tile","Lær at læse informationen på et felt"},
+  board = new String[]       {"See the entire board","Se brættet"},
+  ownerList = new String[]   {"See what tiles all players own","Se alle spilleres felter"},
+  line = new String[]        {"Missing line","Mangler linje"},
+  name = new String[]        {"Tile name: ","Navn på felt: "},
+  nr = new String[]          {"Tile nr: ", "Felt nr: "},
+  color = new String[]       {"Tile color: ", "Felt farve: "},
+  action = new String[]      {"Please choose an action", "Vælg en handling"},
+  inpectP = new String[]     {"Which tile do you wish to inspect: ", "Hvilket felt ønsker du inspektere"},
   owns = new String[] {
-    "Player 1 owns ", "Player 1 ejer ",
-    "Player 2 owns ", "Player 2 ejer ",
-    "Player 3 owns ", "Player 3 ejer ",
-    "Player 4 owns ", "Player 4 ejer "
+                              "Player 1 owns ", "Player 1 ejer ",
+                              "Player 2 owns ", "Player 2 ejer ",
+                              "Player 3 owns ", "Player 3 ejer ",
+                              "Player 4 owns ", "Player 4 ejer "
   },
 
-  $ = new String[] {"\tand has ","\tog har "},
-  rolled = new String[] {"Has just rolled a: ", "har lige rullet: "},
-  onTile = new String[] {"and is now on tile ", "og er nu på felt "},
-  call = new String[] {"called: ", "kaldet: "},
-  current = new String[] {"Current player: ", "Nuværende spiller: "},
-  place = new String[] {"You are on tile ", "Du er nu på felt "},
-  spiller = new String[] {"Player: ", "Spiller: "},
-  names = new String[] {"\tname: ", "\tname: "},
-  unBought = new String[] {"\thas yet to purchase a property", "\thar ikke købt en ejendom endnu"},
-  bank = new String[] {"Bank owned", "Ejet af banken"},
-  price = new String[] {"| price: ", "| pris: "},
-  above = new String[] {"Number may not be above: ", "Tallet må ikke være over: "},
-  below = new String[] {"Number may not be below: ", "Tallet må ikke være under: "},
-  numeral = new String[] {"Only whole numbers are accepted (as numerals)", "Kun heltal accepteres (Som numeraler)"},
-  colors = new String[] {"Only these colors are accepted:", "Kun disse farve er accepteret:"},
-  commands = new String[] {"Only these commands are accepted:", "Kun disse kommandoer accepteres:"};
+  $ = new String[]           {"\tand has ","\tog har "},
+  rolled = new String[]      {"Has just rolled a: ", "har lige rullet: "},
+  onTile = new String[]      {"and is now on tile ", "og er nu på felt "},
+  call = new String[]        {"called: ", "kaldet: "},
+  current = new String[]     {"Current player: ", "Nuværende spiller: "},
+  place = new String[]       {"You are on tile ", "Du er nu på felt "},
+  spiller = new String[]     {"Player: ", "Spiller: "},
+  names = new String[]       {"\tname: ", "\tname: "},
+  unBought = new String[]    {"\thas yet to purchase a property", "\thar ikke købt en ejendom endnu"},
+  bank = new String[]        {"Bank owned", "Ejet af banken"},
+  price = new String[]       {"| price: ", "| pris: "},
+  above = new String[]       {"Number may not be above: ", "Tallet må ikke være over: "},
+  below = new String[]       {"Number may not be below: ", "Tallet må ikke være under: "},
+  numeral = new String[]     {"Only whole numbers are accepted (as numerals)", "Kun heltal accepteres (Som numeraler)"},
+  colors = new String[]      {"Only these colors are accepted:", "Kun disse farve er accepteret:"},
+  commands = new String[]    {"Only these commands are accepted:", "Kun disse kommandoer accepteres:"};
 
   public static String getSring(int ID){
     switch (ID) {
