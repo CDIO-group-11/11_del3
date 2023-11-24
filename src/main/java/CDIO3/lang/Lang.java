@@ -6,8 +6,8 @@ public class Lang {
     Lang.lang = lang;
   }
   private static String[]
-  playerCount = new String[] {"how many players will be in the game? ","DK"},
-  arcade = new String[] {"Video game arcade","DK"};//tile
+  playerCount = new String[] {"how many players will be in the game? ","Hvor mange spillere spiller med?"},
+  arcade = new String[] {"Video game arcade","Video spils kabinet"};//tile
 
   public static String getSring(int ID){
     switch (ID) {
