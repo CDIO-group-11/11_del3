@@ -79,10 +79,10 @@ public class App {
       int playerCount = UserInput.getInt(Lang.getSring(0),2,4);
       Player.PlayerAmount = playerCount;
     }
-      players = new Player[Player.PlayerAmount];
-      for (int i = 0; i < Player.PlayerAmount ; i++) {
-        players[i] = new Player();
-      }
+    players = new Player[Player.PlayerAmount];
+    for (int i = 0; i < Player.PlayerAmount ; i++) {
+      players[i] = new Player();
+    }
   }
   private static void setPlayerCount(String arg) {
     try {
