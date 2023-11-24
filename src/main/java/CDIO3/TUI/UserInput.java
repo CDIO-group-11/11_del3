@@ -58,7 +58,7 @@ public class UserInput {
     String[] actions = new String[Commands.values().length];
     for (int i = 0; i < commands.length; i++) {
       commands[i] = Commands.values()[i].name();
-      actions [i] = Commands.values()[i].message;
+      actions [i] = Commands.values()[i].getMessage();
     }
     String in = getCommand(message, commands, actions);
     for (int i = 0; i < Commands.values().length; i++) {

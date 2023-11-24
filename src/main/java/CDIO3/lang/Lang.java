@@ -30,6 +30,18 @@ public class Lang {
   toy = new String[] {"Toy store","Legetøjsbutikken"},
   visitJail = new String[] {"Visiting in jail","På besøg i fængsel"},
   zoo = new String[] {"The zoo","Zoo"},
+  descriptCol = new String[] {"│████color█████│" ,"DK"},//length is constant
+  descriptOwn = new String[] {"│owner│#tile nr│" ,"DK"},//length is constant
+  detail = new String[] {"se information about all players","DK"},
+  roll = new String[] {"roll for this turn","DK"},
+  inspect = new String[] {"take a closer look at a tile","DK"},
+  guide = new String[] {"learn how to read a tile","DK"},
+  board = new String[] {"see the entire board","DK"},
+  ownerList = new String[] {"see what tiles all players own","DK"},
+  line = new String[] {"Missing line","DK"},
+  name = new String[] {"tile name: ","DK"},
+  nr = new String[] {"tile nr: ", "DK"},
+  color = new String[] {"tile color: ", "DK"},
 
   public static String getSring(int ID){
     switch (ID) {
@@ -78,8 +90,36 @@ public class Lang {
       case 21:
         return zoo[lang.ordinal()];
       case 22:
-        return pet[lang.ordinal()];
-      default:
+        return descriptCol[lang.ordinal()];
+      case 23:
+        return descriptOwn[lang.ordinal()];
+      case 24:
+        return detail[lang.ordinal()];
+      case 25:
+        return roll[lang.ordinal()];
+      case 26:
+        return inspect[lang.ordinal()];
+      case 27:
+        return guide[lang.ordinal()];
+      case 28:
+        return board[lang.ordinal()];
+      case 29:
+        return ownerList[lang.ordinal()];
+      case 30:
+        return line[lang.ordinal()];
+      case 31:
+        return name[lang.ordinal()];
+      case 32:
+        return nr[lang.ordinal()];
+      case 33:
+        return color[lang.ordinal()];
+      case 34:
+        return null[lang.ordinal()];
+      case 35:
+        return null[lang.ordinal()];
+      case 36:
+        return null[lang.ordinal()];
+        default:
         return null;
     }
   }
