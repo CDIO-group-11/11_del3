@@ -7,7 +7,7 @@ import CDIO3.Tiles.Tile;
 public class Toy extends Tile{
 
     public Toy(int tileNR) {
-        super(Color.brown, "Toy store", tileNR, 3, -1);
+        super(Color.yellow, "Toy store", tileNR, 3, -1);
     }
     @Override
     public void landOn() {

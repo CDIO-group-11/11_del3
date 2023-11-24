@@ -7,7 +7,7 @@ import CDIO3.Tiles.Tile;
 public class Skate extends Tile{
 
     public Skate(int tileNR) {
-        super(Color.brown, "Skate park", tileNR, 2, -1);
+        super(Color.orange, "Skate park", tileNR, 2, -1);
     }
     
     @Override

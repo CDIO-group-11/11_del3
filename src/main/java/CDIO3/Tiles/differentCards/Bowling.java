@@ -7,7 +7,7 @@ import CDIO3.Tiles.Tile;
 public class Bowling extends Tile{
 
     public Bowling(int tileNR) {
-        super(Color.brown, "Bowling alley", tileNR, 4, -1);
+        super(Color.green, "Bowling alley", tileNR, 4, -1);
     }
 
     @Override

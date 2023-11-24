@@ -7,7 +7,7 @@ import CDIO3.Tiles.Tile;
 public class Beach extends Tile{
 
     public Beach(int tileNR) {
-        super(Color.brown, "Beach", tileNR, 4, -1);
+        super(Color.dark_blue, "Beach", tileNR, 5, -1);
     }
     @Override
     public void landOn() {
