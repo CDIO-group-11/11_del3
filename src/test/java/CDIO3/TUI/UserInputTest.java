@@ -65,7 +65,7 @@ public class UserInputTest {
   public void testUserInputCommand(){
     int rand = (int) (Math.random() * Commands.values().length);
     Input(Commands.values()[rand].name());
-    Commands command = UserInput.getCommand(new String[0], "commands");
+    Commands command = UserInput.getCommand("commands");
     assertEquals(Commands.values()[rand].name(), command.name());
   }
 

@@ -88,7 +88,6 @@ public class BoardPrinter {
     for (int i = 0; i < out.length; i++) {
       out[i] = boardPieces[i].getTileNR();
     }
-
     return out;
   }
 }

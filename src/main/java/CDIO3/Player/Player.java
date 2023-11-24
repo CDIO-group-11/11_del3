@@ -3,12 +3,15 @@ package CDIO3.Player;
 public class Player {
     public static int PlayerAmount;
     Wallet wallet = new Wallet();
-    Piece piece;
+    Piece piece = new Piece(0);
     String propertyDeeds;
     int[] tilesowned = new int[24];
     int nrOfTilesOwned = 0;
     
 
+    public int getNrOfTilesOwned() {
+        return nrOfTilesOwned;
+    }
     public Wallet getWallet() {
         return wallet;
     }
