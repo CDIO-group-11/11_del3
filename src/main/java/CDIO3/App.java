@@ -131,4 +131,18 @@ public class App {
     }
     return owners;
   }
+  public void endGame(String reason){
+    System.out.println("the game has ended");
+    System.out.println(reason);
+    System.out.print("the winner is player ");
+    int win = 0;
+    for (int i = 1; i < players.length; i++) {
+      if(players[i].getWallet().get$() > players[win].getWallet().get$()){
+        win = i;
+      }
+    }
+    System.out.println((win+1));
+    System.out.println("who has: " + players[win].getWallet().get$());
+    System.exit(0);
+  }
 }
