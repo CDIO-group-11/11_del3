@@ -30,18 +30,18 @@ public class Lang {
   toy = new String[] {"Toy store","Legetøjsbutikken"},
   visitJail = new String[] {"Visiting in jail","På besøg i fængsel"},
   zoo = new String[] {"The zoo","Zoo"},
-  descriptCol = new String[] {"│████color█████│" ,"DK"},//length is constant
-  descriptOwn = new String[] {"│owner│#tile nr│" ,"DK"},//length is constant
-  detail = new String[] {"se information about all players","DK"},
-  roll = new String[] {"roll for this turn","DK"},
-  inspect = new String[] {"take a closer look at a tile","DK"},
-  guide = new String[] {"learn how to read a tile","DK"},
-  board = new String[] {"see the entire board","DK"},
-  ownerList = new String[] {"see what tiles all players own","DK"},
-  line = new String[] {"Missing line","DK"},
-  name = new String[] {"tile name: ","DK"},
-  nr = new String[] {"tile nr: ", "DK"},
-  color = new String[] {"tile color: ", "DK"},
+  descriptCol = new String[] {"│████color█████│" ,"│████Farve█████│"},//length is constant
+  descriptOwn = new String[] {"│owner│#tile nr│" ,"│Ejer │#Felt nr│"},//length is constant
+  detail = new String[] {"see information about all players","Se information omkring alle spillere"},
+  roll = new String[] {"roll for this turn","Rul for denne tur"},
+  inspect = new String[] {"take a closer look at a tile","Tag et næmmere kig på et felt"},
+  guide = new String[] {"learn how to read a tile","Lær at læse informationen på et felt"},
+  board = new String[] {"see the entire board","Se brættet"},
+  ownerList = new String[] {"see what tiles all players own","Se alle spilleres felter"},
+  line = new String[] {"Missing line","Mangler linje"},
+  name = new String[] {"tile name: ","Navn på felt: "},
+  nr = new String[] {"tile nr: ", "Felt nr: "},
+  color = new String[] {"tile color: ", "Felt farve: "},
 
   public static String getSring(int ID){
     switch (ID) {
