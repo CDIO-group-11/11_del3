@@ -57,7 +57,7 @@ public class TUI_Manager {
     System.out.println();
     
     if(die1 != -1){
-      System.out.println((previusPlayer + 1) + Lang.getSring(41) + die1);
+      System.out.println(Lang.getSring(46) + (previusPlayer + 1) + Lang.getSring(41) + die1);
       System.out.println(Lang.getSring(42) + (players[previusPlayer].getPiece().getPosition() + 1));
       System.out.println(Lang.getSring(43) + table.getTile(players[previusPlayer].getPiece().getPosition()).getName());
     }
