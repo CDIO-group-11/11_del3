@@ -7,7 +7,8 @@ public class Lang {
   }
   private static String[]
   playerCount = new String[] {"how many players will be in the game? ","DK"},
-  arcade = new String[] {"Video game arcade","DK"};//tile
+  arcade = new String[] {"Video game arcade","DK"},//tile
+  beach = new String[] {"Beach","DK"};
 
   public static String getSring(int ID){
     switch (ID) {
@@ -16,7 +17,7 @@ public class Lang {
       case 1:
         return arcade[lang.ordinal()];
       case 2:
-        return playerCount[lang.ordinal()];
+        return beach[lang.ordinal()];
       case 3:
         return playerCount[lang.ordinal()];
       case 4:
