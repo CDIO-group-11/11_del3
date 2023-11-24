@@ -42,13 +42,13 @@ public class Lang {
   name = new String[] {"tile name: ","Navn på felt: "},
   nr = new String[] {"tile nr: ", "Felt nr: "},
   color = new String[] {"tile color: ", "Felt farve: "},
-  action = new String[] {"please choose an action", "DK"},
-  inpectP = new String[] {"which piece do you wish to inspect: ", "DK"},
+  action = new String[] {"please choose an action", "Vælg en handling"},
+  inpectP = new String[] {"which tile do you wish to inspect: ", "Hvilket felt ønsker du inspektere"},
   owns = new String[] {
-    "Player 1 owns ", "DK",
-    "Player 2 owns ", "DK",
-    "Player 3 owns ", "DK",
-    "Player 4 owns ", "DK"
+    "Player 1 owns ", "Player 1 ejer ",
+    "Player 2 owns ", "Player 2 ejer ",
+    "Player 3 owns ", "Player 3 ejer ",
+    "Player 4 owns ", "Player 4 ejer "
   },
   $ = new String[] {"\tand has ","DK"},
   rolled = new String[] {"has just rolled a: ", "DK"},
